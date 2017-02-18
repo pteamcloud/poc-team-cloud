@@ -18,10 +18,14 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+				<!--	<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
 					<h1><strong>I am Strata</strong>, a super simple<br />
 					responsive site template freebie<br />
-					crafted by <a href="http://pocteamcloud.fr">team-cloud</a>.</h1>
+					crafted by <a href="http://pocteamcloud.fr">team-cloud</a>.</h1>-->
+					<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+								<h3>Project Name</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+
 				</div>
 			</header>
 
@@ -31,20 +35,19 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>Ipsum lorem dolor aliquam ante commodo<br />
-							magna sed accumsan arcu neque.</h2>
+							<h2>Description</h2>
 						</header>
 						<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
 						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
+							<li><a href="#Imp" class="button">Learn More</a></li>
 						</ul>
 					</section>
 
 				<!-- Two -->
 					<section id="two">
-						<h2>Recent Work</h2>
-						<div class="row">
-							<article class="6u 12u$(xsmall) work-item">
+						<h2 id="Imp">Implementation</h2>
+						<div >
+						<!--	<article class="6u 12u$(xsmall) work-item">
 								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
 								<h3>Project 1</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
@@ -73,10 +76,11 @@
 								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
 								<h3>Project 6</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
+							</article>-->
+							<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
 						</div>
 						<ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
+							<li><a href="#" class="button">Step</a></li>
 						</ul>
 					</section>
 

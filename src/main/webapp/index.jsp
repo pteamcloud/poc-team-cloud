@@ -19,57 +19,22 @@
 			<header id="header">
 				<div class="inner">
 					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					</ul>
-				</div>
+				
 					
 					<!-- <h1><strong>I am Strata</strong>, a super simple<br />
 					responsive site template freebie<br />
 					crafted by <a href="http://pocteamcloud.fr">team-cloud</a>.</h1>-->
-			  <div class="inner">
+		
 					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					</ul>
-			  </div>
-	          <div class="inner">
+			 
 					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					</ul>
-			   </div>
-			    <div class="inner">
+			   
 					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					</ul>
-			    </div>
-			    <div class="inner">	
+			    	
 					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					</ul>
-				</div>
-			    <div class="inner">
+				
 					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					</ul>
-
-				</div>
+				
 			</header>
 
 		<!-- Main -->
@@ -92,32 +57,32 @@
 						<div class="row">
 							<article class="6u 12u$(xsmall) work-item">
 								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<h3>Project 1</h3>
+								<a href="index2.jsp"<h3>Project 1</h3></a>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="6u$ 12u$(xsmall) work-item">
 								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-								<h3>Project 3</h3>
+								<a href="index2.jsp"<h3>Project 2</h3></a>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="6u 12u$(xsmall) work-item">
 								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-								<h3>Project 4</h3>
+								<a href="index2.jsp"<h3>Project 3</h3></a>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="6u$ 12u$(xsmall) work-item">
 								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-								<h3>Project 4</h3>
+								<a href="index2.jsp"<h3>Project 4</h3></a>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="6u 12u$(xsmall) work-item">
 								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
-								<h3>Project 5</h3>
+								<a href="index2.jsp"<h3>Project 5</h3></a>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="6u$ 12u$(xsmall) work-item">
 								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-								<h3>Project 6</h3>
+								<a href="index2.jsp"<h3>Project 6</h3></a>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 						</div>
