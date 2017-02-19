@@ -14,7 +14,7 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body id="top">
-
+	
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
@@ -34,7 +34,7 @@
 					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
 				
 					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-				
+				</div>
 			</header>
 
 		<!-- Main -->
@@ -50,39 +50,39 @@
 							<li><a href="#" class="button">Learn More</a></li>
 						</ul>
 					</section>
-
+					
 				<!-- Two -->
 					<section id="two">
 						<h2>Recent Work</h2>
 						<div class="row">
 							<article class="6u 12u$(xsmall) work-item">
 								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<a href="index2.jsp"<h3>Project 1</h3></a>
+								<a href="index2.jsp"> <b>Project 1</b> </a>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="6u$ 12u$(xsmall) work-item">
 								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-								<a href="index2.jsp"<h3>Project 2</h3></a>
+								<a href="index2.jsp"> Project 2 </a>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="6u 12u$(xsmall) work-item">
 								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-								<a href="index2.jsp"<h3>Project 3</h3></a>
+								<a href="index2.jsp">Project 3</a>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="6u$ 12u$(xsmall) work-item">
 								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-								<a href="index2.jsp"<h3>Project 4</h3></a>
+								<a href="index2.jsp">Project 4</a>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="6u 12u$(xsmall) work-item">
 								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
-								<a href="index2.jsp"<h3>Project 5</h3></a>
+								<a href="index2.jsp">Project 5</a>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="6u$ 12u$(xsmall) work-item">
 								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-								<a href="index2.jsp"<h3>Project 6</h3></a>
+								<a href="index2.jsp">Project 6</a>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 						</div>
