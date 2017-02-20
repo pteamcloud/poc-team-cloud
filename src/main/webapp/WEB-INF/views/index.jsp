@@ -1,16 +1,35 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+
 <!DOCTYPE HTML>
 <!--
 	Strata by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
 <html>
 	<head>
 		<title>Strata by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]
 		<link rel="stylesheet" href="assets/css/main.css" />
+		
+		<link href="<c:url value="/viewsResources/assets/css/main.css" />" rel="stylesheet">-->
+		<spring:url value="/resources/css/main.css" var="mainCss" />
+		<link href="${mainCss}" rel="stylesheet" />
+		
+		<!--<spring:url value="/resources/js/main.js" var="mainJs" />
+		<spring:url value="/resources/js/jquery.min.js" var="JqueryJs" />
+	    
+	    
+	    <script src="${mainJs}"> </script>
+	    <script src="${JqueryJs}"> </script>
+	    
+	    <spring:url value="/resources" var ="img"/>
+	    <link href="$img">-->
+
+  
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body id="top">
@@ -57,7 +76,7 @@
 						<div class="row">
 							<article class="6u 12u$(xsmall) work-item">
 								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<a href="index2.jsp"> <b>Project 1</b> </a>
+								<a href="projects"> <b>Project 1</b> </a>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="6u$ 12u$(xsmall) work-item">
@@ -65,9 +84,9 @@
 								<a href="index2.jsp"> Project 2 </a>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
-							<article class="6u 12u$(xsmall) work-item">
+							<!-- <article class="6u 12u$(xsmall) work-item">
 								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-								<a href="index2.jsp">Project 3</a>
+								<a href="projects">Project 3</a>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="6u$ 12u$(xsmall) work-item">
@@ -85,7 +104,7 @@
 								<a href="index2.jsp">Project 6</a>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
-						</div>
+						--></div>
 						<ul class="actions">
 							<li><a href="#" class="button">Full Portfolio</a></li>
 						</ul>
