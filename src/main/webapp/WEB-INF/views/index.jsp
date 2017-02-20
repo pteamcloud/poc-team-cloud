@@ -81,7 +81,7 @@
 							</article>
 							<article class="6u$ 12u$(xsmall) work-item">
 								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-								<a href="index2.jsp"> Project 2 </a>
+								<a href="projects"> Project 2 </a>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<!-- <article class="6u 12u$(xsmall) work-item">
