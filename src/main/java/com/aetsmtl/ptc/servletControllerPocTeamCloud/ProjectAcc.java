@@ -44,15 +44,15 @@ public class ProjectAcc{
 	
 	@RequestMapping("projects")
 	public String getProject(Model model){
-		System.out.println("Making sure that we pass by this ways projects");
+		System.out.println("Making sure that we pass by this ways projects /projects");
 		
 		return "projects";
 	}
 	
 	@RequestMapping(value="members")
 	public String getMembers(Model model){
-		System.out.println("Making sure that we pass by this ways members");
-		
+		System.out.println("Making sure that we pass by this ways members /members");
+	
 		return "members";
 	}
 	
