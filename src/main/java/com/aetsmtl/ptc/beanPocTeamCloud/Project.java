@@ -1,7 +1,15 @@
 package com.aetsmtl.ptc.beanPocTeamCloud;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Project {
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	private String name;
 	private String description;
@@ -30,11 +38,17 @@ public class Project {
 		//For Spring :-)
 	}
 	
-	public Project(Long id, String name, String description) {
+	public Project(String name, String description) {
 		super();
-		this.id = id;
+		//this.id = id;
 		this.name = name;
 		this.description = description;
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return String.format("my ID : %d\n, my Name : %s\n, little Description : %s\n", id, name, description);
 	}
 
 }
