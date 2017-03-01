@@ -6,12 +6,6 @@ public class Project {
 	private String name;
 	private String description;
 	
-	/* for the futur
-	 * 
-	private List<Member> contributors;
-	private 
-	*/
-	
 	public Long getId() {
 		return id;
 	}
