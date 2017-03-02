@@ -1,24 +1,16 @@
 <!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-	
-	Strong modified by PocTeamCloud
--->
 
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Welcome to Poc-Team-Cloud Platform</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-<link rel="stylesheet" href="assets/css/main.css" />
-<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<title>Welcome to Poc-Team-Cloud Platform</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
 
 <body id="top">
-
 	<!-- Header -->
 	<header id="header">
 		<div class="inner">
@@ -31,13 +23,12 @@
 				below ! :-)
 			</h1>
 
-			<a href="#" class="image avatar"><img src="images/avatar.jpg"
-				alt="" /></a> <a href="#" class="image avatar"><img
-				src="images/avatar.jpg" alt="" /></a> <a href="#" class="image avatar"><img
-				src="images/avatar.jpg" alt="" /></a> <a href="#" class="image avatar"><img
-				src="images/avatar.jpg" alt="" /></a> <a href="#" class="image avatar"><img
-				src="images/avatar.jpg" alt="" /></a> <a href="#" class="image avatar"><img
-				src="images/avatar.jpg" alt="" /></a>
+			<a href="#" class="image avatar" th:each="member : ${ourTeam}"> <img
+				src="images/avatar.jpg" alt="" />
+				
+				<span th:text="${member.lastName}">name</span>
+				<p th:text="${member.role}">role</p>
+			</a>
 
 		</div>
 	</header>
@@ -59,31 +50,19 @@
 			<ul class="actions">
 				<li><a href="#" class="button">Learn More</a></li>
 			</ul>
-		</section>
-
+		</section>	
 		<!-- Two -->
 		<section id="two">
 			<header class="major">
 				<h2>Recent Work</h2>
 			</header>
-			<div class="row">
-				<article class="6u 12u$(xsmall) work-item">
+			<div class="row" >
+				<article class="6u 12u$(xsmall) work-item" th:each="project : ${ourProject}">
 					<a href="images/fulls/01.jpg" class="image fit thumb"> <img
-						src="images/thumbs/01.jpg" alt="" /></a> <a href="projects">
-						Project 1 </a>
-					<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-				</article>
-				<article class="6u$ 12u$(xsmall) work-item">
-					<a href="images/fulls/02.jpg" class="image fit thumb"> <img
-						src="images/thumbs/02.jpg" alt="" /></a> <a href="projects">
-						Project 2 </a>
-					<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-				</article>
-				<article class="6u 12u$(xsmall) work-item">
-					<a href="images/fulls/03.jpg" class="image fit thumb"> <img
-						src="images/thumbs/03.jpg" alt="" /></a> <a href="projects">
-						Project3</a>
-					<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+						src="images/thumbs/01.jpg" alt="" /></a> <a href="projects" th:text="${project.name}">
+						Project x </a>
+					<p th:text="${project.description}">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+          
 				</article>
 			</div>
 			<ul class="actions">
@@ -95,56 +74,18 @@
 		<!-- Three -->
 		<section id="three">
 			<header class="major">
-				<h2>Get In Touh</h2>
+				<h2>Get In Touch</h2>
 			</header>
 			<p>Accumsan pellentesque commodo blandit enim arcu non at amet id
 				arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi
 				lorem vulputate lorem neque lorem ipsum dolor.</p>
 			<div class="row">
-<!-- 				<div class="8u 12u$(small)"> -->
-<!-- 					<form method="post" action="#"> -->
-<!-- 						<div class="row uniform 50%"> -->
-<!-- 							<div class="6u 12u$(xsmall)"> -->
-<!-- 								<input type="text" name="name" id="name" placeholder="Name" /> -->
-<!-- 							</div> -->
-<!-- 							<div class="6u$ 12u$(xsmall)"> -->
-<!-- 								<input type="email" name="email" id="email" placeholder="Email" /> -->
-<!-- 							</div> -->
-<!-- 							<div class="12u$"> -->
-<!-- 								<textarea name="message" id="message" placeholder="Message" -->
-<!-- 									rows="4"></textarea> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 					</form> -->
-<!-- 					<ul class="actions"> -->
-<!-- 						<li><input type="submit" value="Send Message" /></li> -->
-<!-- 					</ul> -->
-<!-- 				</div> -->
-<!-- 				<div class="4u$ 12u$(small)"> -->
-<!-- 					<ul class="labeled-icons"> -->
-<!-- 						<li> -->
-<!-- 							<h3 class="icon fa-home"> -->
-<!-- 								<span class="label">Address</span> -->
-<!-- 							</h3> 1234 Somewhere Rd.<br /> Nashville, TN 00000<br /> United -->
-<!-- 							States -->
-<!-- 						</li> -->
-<!-- 						<li> -->
-<!-- 							<h3 class="icon fa-mobile"> -->
-<!-- 								<span class="label">Phone</span> -->
-<!-- 							</h3> 000-000-0000 -->
-<!-- 						</li> -->
-<!-- 						<li> -->
-<!-- 							<h3 class="icon fa-envelope-o"> -->
-<!-- 								<span class="label">Email</span> -->
-<!-- 							</h3> <a href="#">hello@untitled.tld</a> -->
-<!-- 						</li> -->
-<!-- 					</ul> -->
-<!-- 				</div> -->
 				</div> 
 		</section>
 	</div>
+	
 	<!-- Footer -->
-	<footer id="footer">
+<!-- 	<footer id="footer">
 		<div class="inner">
 			<ul class="icons">
 				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -161,6 +102,7 @@
 				<li>Design: <a href="http://pocteamcloud.fr">Team-Cloud</a></li>
 			</ul>
 		</div>
-	</footer>
+	</footer> -->
 </body>
+
 </html>
