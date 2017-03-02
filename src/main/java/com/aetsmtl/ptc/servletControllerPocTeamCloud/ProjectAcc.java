@@ -99,7 +99,6 @@ public class ProjectAcc{
 	@RequestMapping("projects")
 	public String getProject(Model model){
 		System.out.println("Making sure that we pass by this ways projects /projects");
-		
         logController.info("Récupération d'un des projets / LOgger");
 //        logController.info(pDAO.findProjectX(3).toString());
 		
