@@ -73,6 +73,15 @@
   <build>
     <finalName>pocTeamCloud</finalName>
 	<plugins>
+	<plugin>
+		<groupId>org.wildfly.plugins</groupId>
+		<artifactId>wildfly-maven-plugin</artifactId>
+		<version>1.0.1.Final</version>
+		<configuration>
+             <username>Wildfly</username>
+             <password>Wildfly</password>
+        </configuration>
+	</plugin>
 		<plugin>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-maven-plugin</artifactId>
@@ -84,7 +93,7 @@
 				</execution>
 			</executions>
 		</plugin>
-	</plugins>
+</plugins>
  </build>
 
 </project>
