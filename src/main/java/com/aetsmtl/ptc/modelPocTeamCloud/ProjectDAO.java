@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.aetsmtl.ptc.beanPocTeamCloud.Member;
 import com.aetsmtl.ptc.beanPocTeamCloud.Project;
 
 @Component
@@ -24,7 +25,6 @@ public class ProjectDAO {
 		this.projectRepo = projectRepo;
 	}
 	
-	@Autowired
 	public ProjectDAO (ProjectRepository projectRepository){
 		logProjectDAO.info("Instantiation of PROJECTREPOSITORY $$$$$");
 		setProjectRepo(projectRepository);
@@ -41,5 +41,10 @@ public class ProjectDAO {
 	public Project findProjectX (long Xid){
 		logProjectDAO.info("Finding an Object By ID $$$$$");
 		return projectRepo.findById(Xid);
+	}
+	
+	public Iterable<Project> findAllMember (){
+		logProjectDAO.info("Finding an Object By ID $$$$$");
+		return projectRepo.findAll();
 	}
 }
