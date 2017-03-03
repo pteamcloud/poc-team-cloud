@@ -78,6 +78,11 @@
 		<artifactId>wildfly-maven-plugin</artifactId>
 		<version>1.2.0.Alpha3</version>
 		<configuration>
+			<execution>
+					<goals>
+						<goal>deploy</goal>
+					</goals>
+				</execution>
              <username>Wildfly</username>
              <password>Wildfly</password>
         </configuration>
