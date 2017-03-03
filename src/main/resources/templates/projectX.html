@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>project : NAME OF PROJECT</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="assets/css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+</head>
+<body id="top">
+
+	<!-- Header -->
+<!-- 	<header id="header"> -->
+<!-- 		<div class="inner"> -->
+<!-- 			<h1> -->
+<!-- 				<strong> We are P-T-C !</strong> The team, <br /> which think -->
+<!-- 				perform and realize the implementation and the maintain of this -->
+<!-- 				platform <br /> here are our gitHub <a -->
+<!-- 					href="https://github.com/Aetsmtl/poc-team-cloud"> -->
+<!-- 					pocTeamCloud-Open-Source-GitHub-Project</a>.<br /> And we are just -->
+<!-- 				below ! :-) -->
+<!-- 			</h1> -->
+
+<!-- 			<a href="#" class="image avatar" th:each="member : ${ourTeam}"> <img -->
+<!-- 				src="images/avatar.jpg" alt="" /> <span -->
+<!-- 				th:text="${member.lastName}">name</span> -->
+<!-- 				<p th:text="${member.role}">role</p> -->
+<!-- 			</a> -->
+
+<!-- 		</div> -->
+<!-- 	</header> -->
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- four -->
+		<section id="one">
+			<header class="major">
+				<h1 th:text="' The name of this project is ' + ${proj.name}">
+					vb</h1>
+			</header>
+
+
+			<div class="container">
+				<div class="pull-right">
+					<h4>
+						<a th:href="@{/pj}" href="projects.html"> All of our projects
+						</a>
+					</h4>
+				</div>
+				<div class="pull-right">
+					<h2>
+						Info about <span th:text="${proj.name}"></span>
+					</h2>
+				</div>
+				<dl>
+					<dt>ID</dt>
+					<dd id="id" th:text="${proj.id}">123</dd>
+					<dt>Description</dt>
+					<dd id="description" th:text="${proj.description}">A short
+						summary...</dd>
+				</dl>
+			</div>
+
+		</section>
+
+
+	</div>
+
+
+
+</body>
+</html>

@@ -47,10 +47,21 @@
 				accumsan pellentesque commodo blandit enim arcu non at amet id arcu
 				magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem
 				vulputate lorem neque cubilia.</p>
-			<ul class="actions">
-				<li><a href="#" class="button">Learn More</a></li>
-			</ul>
+<!-- 			<ul class="actions"> -->
+<!-- 				<li><a href="#" class="button">Learn More</a></li> -->
+<!-- 			</ul> -->
+
 		</section>	
+		
+		<!-- four -->
+		<section id="one">
+			<header class="major">
+				<h2>Go to all of projects</h2>
+			</header>
+			<h2>Our pojects in progress :-)</h2> 
+			<a href = "projects" th:href="@{/pj}"> Clic here to view all of our HERE </a>
+		</section>
+		
 		<!-- Two -->
 		<section id="two">
 			<header class="major">
@@ -59,7 +70,7 @@
 			<div class="row" >
 				<article class="6u 12u$(xsmall) work-item" th:each="project : ${ourProject}">
 					<a href="images/fulls/01.jpg" class="image fit thumb"> <img
-						src="images/thumbs/01.jpg" alt="" /></a> <a href="projects" th:text="${project.name}">
+						src="images/thumbs/01.jpg" alt="" /></a> <a th:href="@{/pj/{pID}(pID=${project.id})}" href="projectX" th:text="${project.name}">
 						Project x </a>
 					<p th:text="${project.description}">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
           
