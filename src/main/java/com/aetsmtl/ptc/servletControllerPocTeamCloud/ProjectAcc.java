@@ -70,26 +70,26 @@ public class ProjectAcc{
 		return "index";
 	}
 	
-	/*
-	private void createSomeProjectForTesting() {
-	 //TODO Auto-generated method stub
-		pDAO.saveProject(new Project("project UNO", "Je decris le premier project"));
-		pDAO.saveProject(new Project("project DOCE", "Je decris le premier project"));
-		pDAO.saveProject(new Project("project TRECE", "Je decris le premier project"));
-		pDAO.saveProject(new Project("project QUATRO", "Je decris le premier project"));
-		pDAO.saveProject(new Project("project CINQO", "Je decris le premier project"));
 	
-	}
+//	private void createSomeProjectForTesting() {
+//	 //TODO Auto-generated method stub
+//		pDAO.saveProject(new Project("project UNO", "Je decris le premier project"));
+//		pDAO.saveProject(new Project("project DOCE", "Je decris le premier project"));
+//		pDAO.saveProject(new Project("project TRECE", "Je decris le premier project"));
+//		pDAO.saveProject(new Project("project QUATRO", "Je decris le premier project"));
+//		pDAO.saveProject(new Project("project CINQO", "Je decris le premier project"));
+//	
+//	}
+//
+//	private void createSomeUserForTesting() {
+//	// TODO Auto-generated method stub
+//		mDAO.saveMember(new Member("FEWOU", "Ing. Virtualisation Cloud chez Axians"));
+//		mDAO.saveMember(new Member("KOUAM", "Developpeuse Python Chez ..."));
+//		mDAO.saveMember(new Member("MBOUMEHANG", "Ing. Production Chez NextXP "));
+//		mDAO.saveMember(new Member("MIAFFOSSA", "Ing. DevOps Chez Capgemini"));
+//		mDAO.saveMember(new Member("FOTSING", "Cadre Ing. Chez Adneom"));
+//	}
 
-	private void createSomeUserForTesting() {
-	// TODO Auto-generated method stub
-		mDAO.saveMember(new Member("FEWOU", "Ing. Virtualisation Cloud chez Axians"));
-		mDAO.saveMember(new Member("KOUAM", "Developpeuse Python Chez ..."));
-		mDAO.saveMember(new Member("MBOUMEHANG", "Ing. Production Chez NextXP "));
-		mDAO.saveMember(new Member("MIAFFOSSA", "Ing. DevOps Chez Capgemini"));
-		mDAO.saveMember(new Member("FOTSING", "Cadre Ing. Chez Adneom"));
-	}
-*/
 	
 	@RequestMapping(value="accueil")
 	public String accueil(Model model){
