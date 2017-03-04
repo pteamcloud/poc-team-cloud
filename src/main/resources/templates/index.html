@@ -14,22 +14,15 @@
 	<!-- Header -->
 	<header id="header">
 		<div class="inner">
-			<h1>
-				<strong> We are P-T-C !</strong> The team, <br /> which think
-				perform and realize the implementation and the maintain of this
-				platform <br /> here are our gitHub <a
-					href="https://github.com/Aetsmtl/poc-team-cloud">
-					pocTeamCloud-Open-Source-GitHub-Project</a>.<br /> And we are just
-				below ! :-)
-			</h1>
-
-			<a href="#" class="image avatar" th:each="member : ${ourTeam}"> <img
-				src="images/avatar.jpg" alt="" />
-				
+			<div class ="avatar image" th:each="member : ${ourTeam}">
+				<a href="#"> 
+					<img src="images/avatar.jpg" alt="" />
+				</a>
+				<br/>
 				<span th:text="${member.lastName}">name</span>
+				<br/>
 				<p th:text="${member.role}">role</p>
-			</a>
-
+			</div>		
 		</div>
 	</header>
 
@@ -41,12 +34,12 @@
 			<header class="major">
 				<h2>About US.</h2>
 			</header>
-			<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac
-				nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in
-				curae lobortis tortor primis integer massa adipiscing id nisi
-				accumsan pellentesque commodo blandit enim arcu non at amet id arcu
-				magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem
-				vulputate lorem neque cubilia.</p>
+			<p>	<strong> We are P-T-C !</strong> The team, <br /> which think
+				perform and realize the implementation and the maintain of this
+				platform <br /> here are our gitHub <a
+					href="https://github.com/Aetsmtl/poc-team-cloud">
+					pocTeamCloud-Open-Source-GitHub-Project</a>.<br /> And we are just
+				below ! </p>
 <!-- 			<ul class="actions"> -->
 <!-- 				<li><a href="#" class="button">Learn More</a></li> -->
 <!-- 			</ul> -->

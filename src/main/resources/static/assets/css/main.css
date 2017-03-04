@@ -15,7 +15,7 @@
 		border: 0;
 		font-size: 100%;
 		font: inherit;
-		vertical-align: baseline;
+		vertical-align: top;
 	}
 	
 	.css{
@@ -59,6 +59,7 @@
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
+		/*vertical-align: top;*/
 	}
 
 /* Containers */
@@ -2514,6 +2515,7 @@
 			-ms-flex-grow: 1;
 			flex-grow: 1;
 			margin: 0 0 2em 0;
+			text-align: center;
 		}
 
 		#header strong, #header b {
