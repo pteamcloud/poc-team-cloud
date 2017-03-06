@@ -65,7 +65,12 @@
 			</div>
 
 		</section>
-
+		<section id="two">
+			<a th:href="@{/pj/{id}/proj(id=${proj.id}, pId=${proj.id})}" ><span>Delete this project</span></a>
+			<form method="post" th:action="@{/pj/{id}/proj(id=${proj.id}, pId=${proj.id})}">
+				<button type="submit">Delete this project</button>
+			</form>
+		</section>
 
 	</div>
 

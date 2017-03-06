@@ -33,9 +33,16 @@ public class ProjectDAO {
 	public boolean saveProject (Project p){
 		logProjectDAO.info("Saving an Project $$$$$");
 		if (p.equals(projectRepo.save(p))){
+			
 			return true;
 		}
 		return false;
+	}
+	
+	public void deleteProject (Long pId){
+		logProjectDAO.info("Deleting an Project $$$$$");
+		//projectRepo.delete(p);
+		projectRepo.delete(pId);
 	}
 	
 	public Project findProjectX (long Xid){
