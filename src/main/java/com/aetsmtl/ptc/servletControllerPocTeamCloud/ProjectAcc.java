@@ -27,8 +27,6 @@ public class ProjectAcc{
 	private Iterable<Member> team;
 	private Iterable<Project> proj;
 	
-	private List<Member> ht;
-	
  	private static final Logger logController = LoggerFactory.getLogger(ProjectAcc.class);
 	private static final String PATH = "/error";
 	

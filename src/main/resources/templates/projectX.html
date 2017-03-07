@@ -5,76 +5,65 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-<link rel="stylesheet" href="assets/css/main.css" />
-<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+<link href="/assets/css/main.css" th:href="@{/assets/css/main.css}" rel="stylesheet" />
+<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif] href="assets/css/main.css-->
 
 </head>
 <body id="top">
 
 	<!-- Header -->
-<!-- 	<header id="header"> -->
-<!-- 		<div class="inner"> -->
-<!-- 			<h1> -->
-<!-- 				<strong> We are P-T-C !</strong> The team, <br /> which think -->
-<!-- 				perform and realize the implementation and the maintain of this -->
-<!-- 				platform <br /> here are our gitHub <a -->
-<!-- 					href="https://github.com/Aetsmtl/poc-team-cloud"> -->
-<!-- 					pocTeamCloud-Open-Source-GitHub-Project</a>.<br /> And we are just -->
-<!-- 				below ! :-) -->
-<!-- 			</h1> -->
-
-<!-- 			<a href="#" class="image avatar" th:each="member : ${ourTeam}"> <img -->
-<!-- 				src="images/avatar.jpg" alt="" /> <span -->
-<!-- 				th:text="${member.lastName}">name</span> -->
-<!-- 				<p th:text="${member.role}">role</p> -->
-<!-- 			</a> -->
-
-<!-- 		</div> -->
-<!-- 	</header> -->
+	<header id="header">
+		<div class="inner">
+			<div class ="avatar image" th:each="member : ${ourTeam}">
+				<a href="#"> 
+					<img src="/images/avatar.jpg" alt="" />
+				</a>
+				<br/>
+				<span th:text="${member.lastName}">name</span>
+				<!-- <br/> -->
+				<!-- <p th:text="${member.role}">role</p> -->
+				<ul class="icons">
+				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+				<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+			</ul>
+			</div>		
+		</div>
+	</header>
 
 	<!-- Main -->
 	<div id="main">
-
 		<!-- four -->
 		<section id="one">
+		<div >
+			<h4>
+				<a th:href="@{/pj}" href="projects.html"> Return to all of our projects</a>
+			</h4>
+		</div>
 			<header class="major">
-				<h1 th:text="' The name of this project is ' + ${proj.name}">
-					vb</h1>
+				<h1 th:text="' The name of this project is ' + ${proj.name}"></h1>
 			</header>
-
-
 			<div class="container">
-				<div class="pull-right">
-					<h4>
-						<a th:href="@{/pj}" href="projects.html"> All of our projects
-						</a>
-					</h4>
-				</div>
-				<div class="pull-right">
+				<div >
 					<h2>
-						Info about <span th:text="${proj.name}"></span>
+						Info about : <span th:text="${proj.name}"></span>
 					</h2>
 				</div>
 				<dl>
-					<dt>ID</dt>
+					<dt>ID </dt>
 					<dd id="id" th:text="${proj.id}">123</dd>
 					<dt>Description</dt>
 					<dd id="description" th:text="${proj.description}">A short
 						summary...</dd>
 				</dl>
 			</div>
-
-		</section>
-		<section id="two">
-			<a th:href="@{/pj/{id}/proj(id=${proj.id}, pId=${proj.id})}" ><span>Delete this project</span></a>
-			<form method="post" th:action="@{/pj/{id}/proj(id=${proj.id}, pId=${proj.id})}">
-				<button type="submit">Delete this project</button>
+			
+			<div>
+				<form method="post" th:action="@{/pj/{id}/proj(id=${proj.id}, pId=${proj.id})}">
+				<input type="submit" value="Delete this project"></input>
 			</form>
+			</div>
 		</section>
 
 	</div>
-
-
-
 </body>
 </html>

@@ -1776,13 +1776,13 @@
 		appearance: none;
 		background: #f7f7f7;
 		border-radius: 0.35em;
-		border: solid 2px transparent;
+		border: solid 2px #b2b2b2;
 		color: inherit;
 		display: block;
 		outline: 0;
 		padding: 0 0.75em;
 		text-decoration: none;
-		width: 100%;
+		width: 60%;
 	}
 
 		input[type="text"]:invalid,
@@ -2337,7 +2337,7 @@
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		background-color: transparent;
 		border-radius: 0.35em;
-		border: solid 3px #efefef;
+		border: solid 3px #b2b2b2;
 		color: #787878 !important;
 		cursor: pointer;
 		display: inline-block;

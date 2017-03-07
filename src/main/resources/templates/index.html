@@ -6,7 +6,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-	<link rel="stylesheet" href="assets/css/main.css" />
+	<link href="/assets/css/main.css" th:href="@{/assets/css/main.css}" rel="stylesheet" />
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
 
@@ -16,7 +16,7 @@
 		<div class="inner">
 			<div class ="avatar image" th:each="member : ${ourTeam}">
 				<a href="#"> 
-					<img src="images/avatar.jpg" alt="" />
+					<img src="/images/avatar.jpg" alt="" />
 				</a>
 				<br/>
 				<span th:text="${member.lastName}">name</span>
@@ -53,10 +53,9 @@
 		<!-- four -->
 		<section id="one">
 			<header class="major">
-				<h2>Go to all of projects</h2>
+				<h2>Go to all of our projects :-)</h2>
 			</header>
-			<h2>Our pojects in progress :-)</h2> 
-			<a href = "projects" th:href="@{/pj}"> Clic here to view all of our HERE </a>
+			<a href = "projects" th:href="@{/pj}"> Here /!\ </a>
 		</section>
 		
 		<!-- Two -->
@@ -73,9 +72,6 @@
           
 				</article>
 			</div>
-			<ul class="actions">
-				<li><a href="#" class="button">Full Portfolio</a></li>
-			</ul>
 		</section>
 
 
