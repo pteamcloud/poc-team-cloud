@@ -48,20 +48,20 @@ public class ProjectAcc{
 		logController.info("Making sure that we pass by this way index at / LOgger");		
 		logController.info("Démarrage de la creation de 4 projects et membres / LOgger");
 		
-//		createSomeUserForTesting ();
-//		createSomeProjectForTesting();
-		
 		team = mDAO.findAllMember();
 	
 //		team.forEach(member -> logController.info(member.toString()));
 		proj = pDAO.findAllMember();
 		
+		if (!checkIfListSizeIsMoreThanThree (proj)){
+			
+			return "index";
+		}
+		
 		int lastIndex = ((List<Project>)proj).size();
 		List<Project> lp = ((List<Project>)proj).subList(lastIndex-2, lastIndex);
 
 //		team.forEach(projet -> logController.info(projet.toString()));
-		
-		
 		model.addAttribute("ourTeam", team);
 		model.addAttribute("ourProject", lp);
 		
@@ -69,6 +69,17 @@ public class ProjectAcc{
 	}
 	
 	
+	private boolean checkIfListSizeIsMoreThanThree(Iterable<Project> proj2) {
+		// TODO Auto-generated method stub
+		if (proj2 == null || 
+				((List<Project>)proj2).isEmpty() || 
+				((List<Project>)proj2).size() < 3){
+					return false;
+				}
+		return true;
+	}
+
+
 //	private void createSomeProjectForTesting() {
 //	 //TODO Auto-generated method stub
 //		pDAO.saveProject(new Project("project UNO", "Je decris le premier project"));
