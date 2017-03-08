@@ -29,7 +29,29 @@
 		</div>
 	</header>
     
+    
     <div id="main">
+    
+    <!-- Menu -->
+	<ul id="menu">
+    <li><a href="#">Home</a></li>
+    <li>
+        <a href="#">Projet</a>
+        <ul>
+            <li><a href="#">View Projet</a></li>
+            <li><a href="#">Creer Projet</a></li>
+        </ul>
+    </li>
+    <li>
+    	<a href="#">Membre</a>
+    	 <ul>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Ajoute Membre</a></li>
+        </ul>
+    </li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+ </ul>
     	 <div class="container">
     <form action="#" th:action="@{/pj/(createProjectForm)}" th:object="${proj}" method="post">
     	
