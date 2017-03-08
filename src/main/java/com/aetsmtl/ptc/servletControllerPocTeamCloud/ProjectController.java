@@ -2,6 +2,8 @@ package com.aetsmtl.ptc.servletControllerPocTeamCloud;
 
 import javax.validation.Valid;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
@@ -22,19 +24,21 @@ import com.aetsmtl.ptc.modelPocTeamCloud.ProjectDAO;
 @RequestMapping("pj")
 public class ProjectController {
 
+	private static final Logger projectControllerLogger = 
+			LoggerFactory.getLogger(ProjectController.class);
+	
 	@Autowired
 	private ProjectDAO pDAO;
 	@Autowired
 	private MemberDAO mDAO;
 	
 	@RequestMapping
-	public String getProject(Model model){
-		System.out.println("Making sure that we pass by this ways projects /projects");
-		
+	public String getProjects(Model model){
+	
+		projectControllerLogger.info(" $$$ Response from ProjectControllerRoot");
 		
 		model.addAttribute("ourTeam", mDAO.findAllMember());
 		model.addAttribute("ourProject", pDAO.findAllMember());
-		
 		
 		return "projects";
 	}
@@ -66,18 +70,18 @@ public class ProjectController {
 		};
 		redirect.addFlashAttribute("globalMessage", "Successfully created a new project");
 		return new ModelAndView("redirect:/pj/{proj.id}", "proj.id", proj.getId());
-		//return "projects";
 	}
 	
 	@RequestMapping(value="{id}/proj", params = "pId", method = RequestMethod.POST)
 	public ModelAndView deleteP(@PathVariable("id") String pId, RedirectAttributes redirect) {
 		
 		
-		System.out.println("Deleting a project");
+		projectControllerLogger.info(" $$$ Deleting a project");
 		
 		pDAO.deleteProject(Long.parseLong(pId));
 		
 		return new ModelAndView ("redirect:/pj");
 	}
+	
 	
 }
