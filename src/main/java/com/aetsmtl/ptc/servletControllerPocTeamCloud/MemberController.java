@@ -48,8 +48,10 @@ public class MemberController {
 	@RequestMapping("{id}")
 	public String getAMember (@PathVariable("id") Member memb, Model model){
 		
+		
 		//model.addAttribute("ourTeam", mDAO.findAllMember());
 		//Find all (projects, activity, using, etccc, ...) informations about this member
+		model.addAttribute("proj", mDAO.getProjectLinkedToMember(memb.getId()));
 		model.addAttribute("memb", memb);
 		return "MemberX";
 	}

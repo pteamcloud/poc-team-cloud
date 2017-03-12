@@ -14,17 +14,16 @@
 	<!-- Header -->
 	<header id="header">
 		<div class="inner">
-			<div class ="avatar image" th:each="member : ${ourTeam}">
+			<div class ="avatar image" th:each="pj : ${proj}">
 				<a href="#"> 
 					<img src="/images/avatar.jpg" alt="" />
 				</a>
 				<br/>
-				<span th:text="${member.lastName}">name</span>
+				<span th:text="${pj.name}">name</span>
 				<!-- <br/> -->
 				<!-- <p th:text="${member.role}">role</p> -->
 				<ul class="icons">
 				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-				<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 			</ul>
 			</div>		
 		</div>

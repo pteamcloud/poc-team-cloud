@@ -1,5 +1,8 @@
 package com.aetsmtl.ptc.modelPocTeamCloud;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,4 +57,13 @@ public class ProjectDAO {
 		logProjectDAO.info("Finding an Object By ID $$$$$");
 		return projectRepo.findAll();
 	}
+
+	public Set<Member> getMemberLinkedToProject(long projectId){
+	
+		Set<Member> sMember = new HashSet<Member>();
+		sMember = projectRepo.findById(projectId).getContributors();
+		
+		return sMember;
+	}
+
 }
