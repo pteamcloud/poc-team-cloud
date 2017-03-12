@@ -11,6 +11,7 @@
 </head>
 
 <body id="top">
+	
 	<!-- Header -->
 	<header id="header">
 		<div class="inner">
@@ -47,27 +48,28 @@
 		</ul>
 		<!-- ContainerBodyPage -->
 		<div class="container">
-			<form action="#" th:action="@{/pj/(createProjectForm)}"
-				th:object="${proj}" method="post">
+			<form action="#" th:action="@{/mb/(createMemberForm)}"
+				th:object="${memb}" method="post">
 <!-- 				<div> -->
 <!-- 					<a href="index" th:href="@{/}"> Return to Home page </a> -->
 <!-- 				</div> -->
 				<!-- create a project -->
 				<div>
 					<br></br>
-					<h2>Create a project</h2>
+					<h2>Create a member</h2>
 					<br></br>
 				</div>
 				<div>
-					<label for="name">Name</label> 
-					<input type="text" th:field="*{name}" /> 	
-					<label for="description">Description</label> 
-					<input type="text" th:field="*{description}"/> 
-					<label for="versionningLink">Versionning link</label> 
-					<input type="text" th:field="*{versionningLink}"/>
+					<label for="surname">surName</label> 
+					<input type="text" th:field="*{surName}" /> 	
+					<label for="lastName">lastName</label> 
+					<input type="text" th:field="*{lastName}"/> 
+					<label for="linkedinUrlRef">linkedIn Url Ref</label> 
+					<input type="text" th:field="*{linkedinUrlRef}"/>
+					
 <!-- 					<label for="versionningLink">Versionning link</label>  -->
 <!-- 					<input type="url" th:field="*{versionningLink}"/> -->
-<!-- 					<label for="contributors">Contributors</label>  -->
+<!-- 					<label for="contributions">Contributors</label>  -->
 <!-- 					<input type="text" th:field="*{contributors}"/> -->
 					<br></br><br></br>
 					<input type="submit" value="Create" />

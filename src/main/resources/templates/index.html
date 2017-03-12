@@ -12,7 +12,7 @@
 
 <body id="top">
 	<!-- Header -->
-	<header id="header">
+	<header id="header" >
 		<div class="inner">
 			<div class ="avatar image" th:each="member : ${ourTeam}">
 				<a href="#"> 
@@ -31,28 +31,12 @@
 	</header>
 
 	<!-- Main -->
+
 	<div id="main">
 	
-	<ul id="menu">
-    <li><a href="#">Home</a></li>
-    <li>
-        <a href="#">Projet</a>
-        <ul>
-            <li><a href="#">View Projet</a></li>
-            <li><a href="#">Creer Projet</a></li>
-        </ul>
-    </li>
-    <li>
-    	<a href="#">Membre</a>
-    	 <ul>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Ajoute Membre</a></li>
-        </ul>
-    </li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
- </ul>
-
+	<!-- for you Kevin, try to improve this inclusion -->
+	<div th:replace="header :: header"> </div>
+	
 		<!-- One -->
 		<section id="one">
 			<header class="major">
@@ -81,7 +65,7 @@
 		<!-- Two -->
 		<section id="two">
 			<header class="major">
-				<h2>Recent Work</h2>
+				<h2>Recent Works</h2>
 			</header>
 			<div class="row" >
 				<article class="6u 12u$(xsmall) work-item" th:each="project : ${ourProject}">
@@ -94,7 +78,30 @@
 			</div>
 		</section>
 
-
+		<!-- five -->
+		<section id="one">
+			<header class="major">
+				<h2>Go to all of our members :-)</h2>
+			</header>
+			<a href = "members" th:href="@{/mb}"> Here /!\ </a>
+		</section>
+		
+		<!-- six -->
+		<section id="two">
+			<header class="major">
+				<h2>Recent Members</h2>
+			</header>
+			<div class="row" >
+				<article class="6u 12u$(xsmall) work-item" th:each="memb : ${ourTeam}">
+					<a href="images/fulls/01.jpg" class="image fit thumb"> <img
+						src="images/thumbs/01.jpg" alt="" /></a> <a th:href="@{/mb/{pID}(pID=${memb.id})}" href="memberX" th:text="${memb.lastName}">
+						Project x </a>
+					<p th:text="${memb.lastName}">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+          
+				</article>
+			</div>
+		</section>
+		
 		<!-- Three -->
 		<section id="three">
 			<header class="major">
@@ -106,27 +113,16 @@
 			<div class="row">
 				</div> 
 		</section>
+		
+	<section id= "nine">
+	<!-- for you Kevin, try to improve this inclusion -->
+	<div th:replace="footer :: footer">&copy; 2017 The Static Templates</div>
+	</section>
 	</div>
 	
 	<!-- Footer -->
-<!-- 	<footer id="footer">
-		<div class="inner">
-			<ul class="icons">
-				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-				<li><a href="#" class="icon fa-dribbble"><span
-						class="label">Dribbble</span></a></li>
-				<li><a href="#" class="icon fa-envelope-o"><span
-						class="label">Email</span></a></li>
-				<li><a href="#" class="icon fa-linkedin"><span
-						class="label">LinkedIn</span></a></li>
-			</ul>
-			<ul class="copyright">
-				<li>&copy; copyright 2017</li>
-				<li>Design: <a href="http://pocteamcloud.fr">Team-Cloud</a></li>
-			</ul>
-		</div>
-	</footer> -->
+
+	
 </body>
 
 </html>
