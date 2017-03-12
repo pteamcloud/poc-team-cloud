@@ -3,7 +3,6 @@ package com.aetsmtl.ptc.beanPocTeamCloud;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,7 +18,8 @@ public class Project {
 	private String name;
 	private String description;
 	//private Member leader;
-	
+	private String versionningLink;
+
 	@ManyToMany(cascade = CascadeType.ALL)
 	private Set<Member> contributors;
 	
@@ -53,6 +53,13 @@ public class Project {
 	}
 	public void setContributors(Set<Member> contributor) {
 		this.contributors = contributor;
+	}
+	
+	public String getVersionningLink() {
+		return versionningLink;
+	}
+	public void setVersionningLink(String versionningLink) {
+		this.versionningLink = versionningLink;
 	}
 	public Project() {
 		

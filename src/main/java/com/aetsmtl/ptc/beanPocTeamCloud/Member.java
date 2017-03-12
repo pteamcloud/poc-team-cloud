@@ -73,6 +73,7 @@ public class Member {
 	public void setProject_Member(Set<Project> project_Member) {
 		this.proj_Member = project_Member;
 	}
+	
 	public Member() {
 		
 		//For Spring :-)

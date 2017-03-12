@@ -81,7 +81,7 @@
 		<!-- Two -->
 		<section id="two">
 			<header class="major">
-				<h2>Recent Work</h2>
+				<h2>Recent Works</h2>
 			</header>
 			<div class="row" >
 				<article class="6u 12u$(xsmall) work-item" th:each="project : ${ourProject}">
@@ -94,7 +94,30 @@
 			</div>
 		</section>
 
-
+		<!-- five -->
+		<section id="one">
+			<header class="major">
+				<h2>Go to all of our members :-)</h2>
+			</header>
+			<a href = "members" th:href="@{/mb}"> Here /!\ </a>
+		</section>
+		
+		<!-- six -->
+		<section id="two">
+			<header class="major">
+				<h2>Recent Members</h2>
+			</header>
+			<div class="row" >
+				<article class="6u 12u$(xsmall) work-item" th:each="memb : ${ourTeam}">
+					<a href="images/fulls/01.jpg" class="image fit thumb"> <img
+						src="images/thumbs/01.jpg" alt="" /></a> <a th:href="@{/mb/{pID}(pID=${memb.id})}" href="memberX" th:text="${memb.lastName}">
+						Project x </a>
+					<p th:text="${memb.lastName}">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+          
+				</article>
+			</div>
+		</section>
+		
 		<!-- Three -->
 		<section id="three">
 			<header class="major">

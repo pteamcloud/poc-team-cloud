@@ -34,34 +34,33 @@
 	<!-- Main -->
 	<div id="main">
 	
-	<!-- Menu -->
-	<ul id="menu">
-    <li><a href="#">Home</a></li>
-    <li>
-        <a href="#">Projet</a>
-        <ul>
-            <li><a href="#">View Projet</a></li>
-            <li><a href="#">Creer Projet</a></li>
-        </ul>
-    </li>
-    <li>
-    	<a href="#">Membre</a>
-    	 <ul>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Ajoute Membre</a></li>
-        </ul>
-    </li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
- </ul>
-	
-	
-	<!-- zero -->
+		<!-- Menu -->
+		<ul id="menu">
+	    <li><a href = "index" th:href="@{/}">Home</a></li>
+	    <li>
+	        <a href="#">Projet</a>
+	        <ul>
+	            <li><a href="#">View Projet</a></li>
+	            <li><a href="#">Creer Projet</a></li>
+	        </ul>
+	    </li>
+	    <li>
+	    	<a href="#">Membre</a>
+	    	 <ul>
+	            <li><a href="#">Profile</a></li>
+	            <li><a href="#">Ajoute Membre</a></li>
+	        </ul>
+	    </li>
+	    <li><a href="#">About</a></li>
+	    <li><a href="#">Contact</a></li>
+	 </ul>
+		
+		<!-- zero -->
 		<section id="zero">
-			<header class="major">
-				<h2>Return to Poc-Team-Cloud home Page </h2>
-				<ul><li><a href = "index" th:href="@{/}"> Home </a></li></ul>
-			</header>
+<!-- 			<header class="major"> -->
+<!-- 				<h2>Return to Poc-Team-Cloud home Page </h2> -->
+<!-- 				<ul><li><a href = "index" th:href="@{/}"> Home </a></li></ul> -->
+<!-- 			</header> -->
 			
 			<header class="major">
 				<h2>Initiate a new project :-) </h2>
@@ -70,12 +69,10 @@
 			
 		</section>
 		
-		<!-- One -->
-		
 		<!-- Two -->
 		<section id="two">
 			<header class="major">
-				<h2>Recent Work</h2>
+				<h2>Works</h2>
 			</header>
 			<div class="row" >
 				<article class="6u 12u$(xsmall) work-item" th:each="project : ${ourProject}">
@@ -91,7 +88,7 @@
 	</div>
 
 	<!-- Footer -->
-<!-- 	<footer id="footer">
+	<!-- 	<footer id="footer">
 		<div class="inner">
 			<ul class="icons">
 				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -108,5 +105,4 @@
 		</div>
 	</footer> -->
 </body>
-
 </html>

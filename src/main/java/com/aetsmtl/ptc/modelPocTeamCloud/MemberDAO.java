@@ -48,4 +48,10 @@ public class MemberDAO {
 		logProjectDAO.info("Finding an Object By ID $$$$$");
 		return memberRepo.findAll();
 	}
+
+	public void deleteMember (Long pId){
+		logProjectDAO.info("Deleting a member $$$$$");
+		//projectRepo.delete(p);
+		memberRepo.delete(pId);
+	}
 }

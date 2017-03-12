@@ -45,79 +45,33 @@ public class ProjectAcc{
 	
 	@RequestMapping("/")
 	public String indexConnexion(Model model){
-		logController.info("Making sure that we pass by this way index at / LOgger");		
-		logController.info("Démarrage de la creation de 4 projects et membres / LOgger");
+		
+		logController.info("Making sure that we pass by this way index at / LOgger");
 		
 		team = mDAO.findAllMember();
-	
-//		team.forEach(member -> logController.info(member.toString()));
 		proj = pDAO.findAllMember();
 		
 		if (!checkIfListSizeIsMoreThanThree (proj)){
-			
 			return "index";
 		}
 		
 		int lastIndex = ((List<Project>)proj).size();
 		List<Project> lp = ((List<Project>)proj).subList(lastIndex-2, lastIndex);
 
-//		team.forEach(projet -> logController.info(projet.toString()));
 		model.addAttribute("ourTeam", team);
 		model.addAttribute("ourProject", lp);
 		
 		return "index";
 	}
 	
-	
 	private boolean checkIfListSizeIsMoreThanThree(Iterable<Project> proj2) {
 		// TODO Auto-generated method stub
 		if (proj2 == null || 
 				((List<Project>)proj2).isEmpty() || 
-				((List<Project>)proj2).size() < 3){
+				((List<Project>)proj2).size() <= 1){
 					return false;
 				}
 		return true;
 	}
-
-
-//	private void createSomeProjectForTesting() {
-//	 //TODO Auto-generated method stub
-//		pDAO.saveProject(new Project("project UNO", "Je decris le premier project"));
-//		pDAO.saveProject(new Project("project DOCE", "Je decris le premier project"));
-//		pDAO.saveProject(new Project("project TRECE", "Je decris le premier project"));
-//		pDAO.saveProject(new Project("project QUATRO", "Je decris le premier project"));
-//		pDAO.saveProject(new Project("project CINQO", "Je decris le premier project"));
-//	
-//	}
-//
-//	private void createSomeUserForTesting() {
-//	// TODO Auto-generated method stub
-//		mDAO.saveMember(new Member("FEWOU", "Ing. Virtualisation Cloud chez Axians"));
-//		mDAO.saveMember(new Member("KOUAM", "Developpeuse Python Chez ..."));
-//		mDAO.saveMember(new Member("MBOUMEHANG", "Ing. Production Chez NextXP "));
-//		mDAO.saveMember(new Member("MIAFFOSSA", "Ing. DevOps Chez Capgemini"));
-//		mDAO.saveMember(new Member("FOTSING", "Cadre Ing. Chez Adneom"));
-//	}
-
 	
-	@RequestMapping(value="accueil")
-	public String accueil(Model model){
-		System.out.println("Making sure that we pass by this way accueil" + qui);
-		
-		return "accueil";
-	}
-	
-	@RequestMapping(value="members")
-	public String getMembers(Model model){
-		System.out.println("Making sure that we pass by this ways members /members");
-	
-		return "members";
-	}
-	
-	@RequestMapping("members/aymard")
-	public String getAymardInf(){
-		System.out.println("Making sure that we pass by this way index at AymardInf");
-		//model.addAttribute("time", new Date());
-		return "aymard";
-	}
 }
