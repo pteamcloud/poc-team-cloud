@@ -53,7 +53,7 @@ public class MemberController {
 		//Find all (projects, activity, using, etccc, ...) informations about this member
 		model.addAttribute("proj", mDAO.getProjectLinkedToMember(memb.getId()));
 		model.addAttribute("memb", memb);
-		return "MemberX";
+		return "memberX";
 	}
 	
 	@RequestMapping(params = "form", method = RequestMethod.GET)
