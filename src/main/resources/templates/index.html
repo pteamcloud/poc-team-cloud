@@ -1,128 +1,68 @@
-<!DOCTYPE HTML>
-
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html>
 <head>
-	<title>Welcome to Poc-Team-Cloud Platform</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-	<link href="/assets/css/main.css" th:href="@{/assets/css/main.css}" rel="stylesheet" />
-	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+  <link rel="import" href="pages/header.html">
+  <title>PoC-TeamCloud</title>
+  <meta charset="utf-8" />
+   <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link href="assets/css/main.css" rel="stylesheet">
+   <script src="/scripts/jquery.min.js"></script>
+   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+   <script src="assets/js/header.js"></script>
 </head>
 
-<body id="top">
-	<!-- Header -->
-	<header id="header" >
-		<div class="inner">
-			<div class ="avatar image" th:each="member : ${ourTeam}">
-				<a href="#"> 
-					<img src="/images/avatar.jpg" alt="" />
-				</a>
-				<br/>
-				<span th:text="${member.lastName}">name</span>
-				<!-- <br/> -->
-				<!-- <p th:text="${member.role}">role</p> -->
-				<ul class="icons">
-				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-				<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-			</ul>
-			</div>		
-		</div>
-	</header>
 
-	<!-- Main -->
 
-	<div id="main">
+<body>
 	
-	<!-- for you Kevin, try to improve this inclusion -->
-	<div th:replace="header :: header"> </div>
-	
-		<!-- One -->
-		<section id="one">
-			<header class="major">
-				<h2>About US.</h2>
-			</header>
-			<p>	<strong> We are P-T-C !</strong> The team, <br /> which think
-				perform and realize the implementation and the maintain of this
-				platform <br /> here are our gitHub <a
-					href="https://github.com/Aetsmtl/poc-team-cloud">
-					pocTeamCloud-Open-Source-GitHub-Project</a>.<br /> And we are just
-				below ! </p>
-<!-- 			<ul class="actions"> -->
-<!-- 				<li><a href="#" class="button">Learn More</a></li> -->
-<!-- 			</ul> -->
+<header>
+  <div class="container">
+   <div class="jumbotron">
+      <h1>TeamCloud</h1>
+     <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+   </div>
+   </div>
+</header>
 
-		</section>	
-		
-		<!-- four -->
-		<section id="one">
-			<header class="major">
-				<h2>Go to all of our projects :-)</h2>
-			</header>
-			<a href = "projects" th:href="@{/pj}"> Here /!\ </a>
-		</section>
-		
-		<!-- Two -->
-		<section id="two">
-			<header class="major">
-				<h2>Recent Works</h2>
-			</header>
-			<div class="row" >
-				<article class="6u 12u$(xsmall) work-item" th:each="project : ${ourProject}">
-					<a href="images/fulls/01.jpg" class="image fit thumb"> <img
-						src="images/thumbs/01.jpg" alt="" /></a> <a th:href="@{/pj/{pID}(pID=${project.id})}" href="projectX" th:text="${project.name}">
-						Project x </a>
-					<p th:text="${project.description}">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-          
-				</article>
-			</div>
-		</section>
+<section id="one">
+<header>
 
-		<!-- five -->
-		<section id="one">
-			<header class="major">
-				<h2>Go to all of our members :-)</h2>
-			</header>
-			<a href = "members" th:href="@{/mb}"> Here /!\ </a>
-		</section>
-		
-		<!-- six -->
-		<section id="two">
-			<header class="major">
-				<h2>Recent Members</h2>
-			</header>
-			<div class="row" >
-				<article class="6u 12u$(xsmall) work-item" th:each="memb : ${ourTeam}">
-					<a href="images/fulls/01.jpg" class="image fit thumb"> <img
-						src="images/thumbs/01.jpg" alt="" /></a> <a th:href="@{/mb/{pID}(pID=${memb.id})}" href="memberX" th:text="${memb.lastName}">
-						Project x </a>
-					<p th:text="${memb.lastName}">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-          
-				</article>
-			</div>
-		</section>
-		
-		<!-- Three -->
-		<section id="three">
-			<header class="major">
-				<h2>Get In Touch</h2>
-			</header>
-			<p>Accumsan pellentesque commodo blandit enim arcu non at amet id
-				arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi
-				lorem vulputate lorem neque lorem ipsum dolor.</p>
-			<div class="row">
-				</div> 
-		</section>
-		
-	<section id= "nine">
-	<!-- for you Kevin, try to improve this inclusion -->
-	<div th:replace="footer :: footer">&copy; 2017 The Static Templates</div>
-	</section>
-	</div>
-	
-	<!-- Footer -->
+<div class="container">
+  <h2>Projet Recent</h2>
+</div>
+</header>
 
-	
+<div class="container">
+ <div class="work-item">
+ <img src="images/fulls/01.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">
+
+ <p>First project</p>
+ </div>
+
+
+
+<div class="work-item">
+ <img src="images/fulls/01.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">
+
+ <p>Second project</p>
+ </div>
+
+</div>
+</section>
+
+<div>
+<ul class="actions">
+        <li><a href="#" class="button">Full Portfolio</a></li>
+</ul>
+</div>
+
+
+
+
+
 </body>
+
+ 
+
 
 </html>
