@@ -39,6 +39,7 @@ public class ProjectController {
 		
 		model.addAttribute("ourTeam", mDAO.findAllMember());
 		model.addAttribute("ourProject", pDAO.findAllMember());
+		model.addAttribute("jname", "Project");
 		
 		return "projects";
 	}
