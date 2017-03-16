@@ -39,6 +39,7 @@ public class ProjectController {
 		
 		model.addAttribute("ourTeam", mDAO.findAllMember());
 		model.addAttribute("ourProject", pDAO.findAllMember());
+		model.addAttribute("jname", "Project");
 		
 		return "projects";
 	}
@@ -46,7 +47,7 @@ public class ProjectController {
 	@RequestMapping("{id}")
 	public String getAProject (@PathVariable("id") Project proj, Model model){
 		
-		model.addAttribute("ourTeam", mDAO.findAllMember());
+		model.addAttribute("ourTeam", pDAO.getMemberLinkedToProject(proj.getId()));
 		model.addAttribute("proj", proj);
 		return "projectX";
 	}

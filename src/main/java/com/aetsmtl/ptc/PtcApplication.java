@@ -21,5 +21,4 @@ public class PtcApplication extends ServletInitializer{
 		log.info("Starting Application");
 		SpringApplication.run(applicationClass, args);
 	}
-
 }

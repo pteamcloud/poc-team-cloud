@@ -1,9 +1,13 @@
 package com.aetsmtl.ptc.beanPocTeamCloud;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Project {
@@ -13,6 +17,11 @@ public class Project {
 	private Long id;
 	private String name;
 	private String description;
+	//private Member leader;
+	private String versionningLink;
+
+	@ManyToMany(cascade = CascadeType.ALL)
+	private Set<Member> contributors;
 	
 	public Long getId() {
 		return id;
@@ -33,6 +42,25 @@ public class Project {
 		this.description = description;
 	}
 	
+//	public Member getLeader() {
+//		return leader;
+//	}
+//	public void setLeader(Member leader) {
+//		this.leader = leader;
+//	}
+	public Set<Member> getContributors() {
+		return contributors;
+	}
+	public void setContributors(Set<Member> contributor) {
+		this.contributors = contributor;
+	}
+	
+	public String getVersionningLink() {
+		return versionningLink;
+	}
+	public void setVersionningLink(String versionningLink) {
+		this.versionningLink = versionningLink;
+	}
 	public Project() {
 		
 		//For Spring :-)
