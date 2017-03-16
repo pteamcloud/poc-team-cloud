@@ -7,12 +7,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link href="/assets/css/main.css" th:href="@{/assets/css/main.css}" rel="stylesheet" />
+	<link href="/assets/bootstrap/css/bootstrap.css" th:href="@{/assets/bootstrap/css/bootstrap.css}" rel="stylesheet" />
+	
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
 
 <body id="top">
 	<!-- Header -->
-	<header id="header">
+	<header id="header" th:replace="header :: header" >
 		<div class="inner">
 			<div class ="avatar image" th:each="member : ${ourTeam}">
 				<a href="#"> 
@@ -33,25 +35,28 @@
 	<!-- Main -->
 	<div id="main">
 	
-	<ul id="menu">
-    <li><a href="#">Home</a></li>
-    <li>
-        <a href="#">Projet</a>
-        <ul>
-            <li><a href="#">View Projet</a></li>
-            <li><a href="#">Creer Projet</a></li>
-        </ul>
-    </li>
-    <li>
-    	<a href="#">Membre</a>
-    	 <ul>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Ajoute Membre</a></li>
-        </ul>
-    </li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
- </ul>
+	<!-- for you Kevin, try to improve this inclusion -->
+<!-- 	<div th:replace="header :: header"> </div> -->
+	
+<!-- 	<ul id="menu"> -->
+<!--     <li><a href="#">Home</a></li> -->
+<!--     <li> -->
+<!--         <a href="#">Projet</a> -->
+<!--         <ul> -->
+<!--             <li><a href="#">View Projet</a></li> -->
+<!--             <li><a href="#">Creer Projet</a></li> -->
+<!--         </ul> -->
+<!--     </li> -->
+<!--     <li> -->
+<!--     	<a href="#">Membre</a> -->
+<!--     	 <ul> -->
+<!--             <li><a href="#">Profile</a></li> -->
+<!--             <li><a href="#">Ajoute Membre</a></li> -->
+<!--         </ul> -->
+<!--     </li> -->
+<!--     <li><a href="#">About</a></li> -->
+<!--     <li><a href="#">Contact</a></li> -->
+<!--  </ul> -->
 
 		<!-- One -->
 		<section id="one">
