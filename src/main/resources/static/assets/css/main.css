@@ -45,6 +45,7 @@ header {
 			line-height: 1.5em;
 			margin: 0;
 		}
+ 
 
 a {
 	margin: 0;
@@ -54,8 +55,6 @@ a {
 		font: inherit;
 		vertical-align: top;
 }
-
-
 
 	.button {
 		-moz-appearance: none;
@@ -166,8 +165,8 @@ a {
 
 					ul.actions.small li:first-child {
 						padding-top: 0;
-					}
 
+					}
 
 
 .row > * {
@@ -295,43 +294,6 @@ a {
 			width: 58.3333333333%;
 			clear: none;
 			margin-left: 0;
-		}
-
-		.\36 u\28small\29, .\36 u\24\28small\29 {
-			width: 50%;
-			clear: none;
-			margin-left: 0;
-		}
-
-
-		.\35 u\28small\29, .\35 u\24\28small\29 {
-			width: 41.6666666667%;
-			clear: none;
-			margin-left: 0;
-		}
-
-		.\34 u\28small\29, .\34 u\24\28small\29 {
-			width: 33.3333333333%;
-			clear: none;
-			margin-left: 0;
-		}
-
-		.\33 u\28small\29, .\33 u\24\28small\29 {
-			width: 25%;
-			clear: none;
-			margin-left: 0;
-		}
-
-		.\32 u\28small\29, .\32 u\24\28small\29 {
-			width: 16.6666666667%;
-
-			clear: none;
-			margin-left: 0;
-		}
-		.\37 u\28small\29, .\37 u\24\28small\29 {
-			width: 58.3333333333%;
-			clear: none;
-			margin-left: 0;
 
 		}
 
@@ -340,6 +302,7 @@ a {
 			clear: none;
 			margin-left: 0;
 		}
+
 
 		.\35 u\28small\29, .\35 u\24\28small\29 {
 			width: 41.6666666667%;
@@ -355,21 +318,17 @@ a {
 			clear: none;
 			margin-left: 0;
 		}
-
-
 		.\33 u\28small\29, .\33 u\24\28small\29 {
 			width: 25%;
 
 			clear: none;
 			margin-left: 0;
 		}
-
 		.\32 u\28small\29, .\32 u\24\28small\29 {
 			width: 16.6666666667%;
 			clear: none;
 			margin-left: 0;
-		}
-
+		} 
 		.\31 u\28small\29, .\31 u\24\28small\29 {
 			width: 8.3333333333%;
 			clear: none;
@@ -656,7 +615,6 @@ a {
 	}
 
 	@media screen and (max-width: 480px) {
-
 		.row > * {
 			padding: 0 0 0 1.5em;
 		}
@@ -869,8 +827,7 @@ a {
 		}
 
 	}
-
-
+	
 .img-circle {
     border-radius: 50%;
 }
