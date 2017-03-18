@@ -31,9 +31,15 @@ header {
 				padding-top: 0;
 			}
 
+
+.major{
+	
+}
+
+
 /* header nav bar */
 .work-item {
-		margin: 0 0 2em 0;
+		margin: 2em;
 		float: left;
 		padding-left: 0;
 		width: 30%;
@@ -55,6 +61,7 @@ a {
 		font: inherit;
 		vertical-align: top;
 }
+
 
 	.button {
 		-moz-appearance: none;
@@ -136,7 +143,7 @@ a {
 		}
 
 			ul.actions {
-				margin: 0 0 2em 0;
+				margin: 0 0 2em -1;
 			}
 
 				ul.actions li {
@@ -170,11 +177,11 @@ a {
 
 
 .row > * {
-			padding: 0 0 0 2.5em;
+			padding: 3 1 3 2.5em;
 		}
 
 		.row {
-			margin: 0 0 -1px -2.5em;
+			margin: 0 0 0px -2.5em;
 		}
 
 
