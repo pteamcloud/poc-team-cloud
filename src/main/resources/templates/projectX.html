@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>project : NAME OF PROJECT</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+<link href="/assets/css/main.css" th:href="@{/assets/css/main.css}" rel="stylesheet" />
+<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif] href="assets/css/main.css-->
+
+</head>
+<body id="top">
+
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<div class ="avatar image" th:each="member : ${ourTeam}">
+				<a href="#"> 
+					<img src="/images/avatar.jpg" alt="" />
+				</a>
+				<br/>
+				<span th:text="${member.lastName}">name</span>
+				<!-- <br/> -->
+				<!-- <p th:text="${member.role}">role</p> -->
+				<ul class="icons">
+				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+				<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+			</ul>
+			</div>		
+		</div>
+	</header>
+
+	<!-- Main -->
+	<div id="main">
+	
+	<!-- Menu -->
+	<ul id="menu">
+    <li><a href="#">Home</a></li>
+    <li>
+        <a href="#">Projet</a>
+        <ul>
+            <li><a href="#">View Projet</a></li>
+            <li><a href="#">Creer Projet</a></li>
+        </ul>
+    </li>
+    <li>
+    	<a href="#">Membre</a>
+    	 <ul>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Ajoute Membre</a></li>
+        </ul>
+    </li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+ </ul>
+		<!-- four -->
+		<section id="one">
+		<div >
+			<h4>
+				<a th:href="@{/pj}" href="projects.html"> Return to all of our projects</a>
+			</h4>
+		</div>
+			<header class="major">
+				<h1 th:text="' The name of this project is ' + ${proj.name}"></h1>
+			</header>
+			<div class="container">
+				<div >
+					<h2>
+						Info about : <span th:text="${proj.name}"></span>
+					</h2>
+				</div>
+				<dl>
+					<dt>ID </dt>
+					<dd id="id" th:text="${proj.id}">123</dd>
+					<dt>Description</dt>
+					<dd id="description" th:text="${proj.description}">A short
+						summary...</dd>
+				</dl>
+			</div>
+			
+			<div>
+				<form method="post" th:action="@{/pj/{id}/proj(id=${proj.id}, pId=${proj.id})}">
+				<input type="submit" value="Delete this project"></input>
+			</form>
+			</div>
+		</section>
+
+	</div>
+</body>
+</html>
