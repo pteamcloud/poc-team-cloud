@@ -1,5 +1,4 @@
-<!DOCTYPE HTML>
-
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title>Welcome to Poc-Team-Cloud Platform</title>
@@ -63,12 +62,12 @@
 		</section>
 
 		<!-- four -->
-		<section id="one">
+		<!--  <section id="one">
 			<header class="major">
 				<h2>Go to all of our projects :-)</h2>
 			</header>
 			<a href = "projects" th:href="@{/pj}"> Here /!\ </a>
-		</section>
+		</section> -->
 
 		<!-- Two -->
 		<section id="two">
@@ -77,22 +76,27 @@
 			</header>
 			<div class="row" >
 				<article class="6u 12u$(xsmall) work-item" th:each="project : ${ourProject}">
-					<a href="images/fulls/01.jpg" class="image fit thumb"> <img
-						src="images/thumbs/01.jpg" alt="" /></a> <a th:href="@{/pj/{pID}(pID=${project.id})}" href="projectX" th:text="${project.name}">
+					<a href="images/fulls/01.jpg" class="image fit thumb "> <img
+						src="images/thumbs/01.jpg" class="img-rounded" alt="" /></a> <a th:href="@{/pj/{pID}(pID=${project.id})}" href="projectX" th:text="${project.name}">
 						Project x </a>
 					<p th:text="${project.description}">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 
 				</article>
 			</div>
+			<div>
+			<ul class="actions">
+        			<li><a href="Project" th:href="@{/pj}" class="button">Full Portfolio</a></li>
+			</ul>
+			</div>
 		</section>
 
 		<!-- five -->
-		<section id="one">
+		<!-- <section id="one">
 			<header class="major">
 				<h2>Go to all of our members :-)</h2>
 			</header>
 			<a href = "members" th:href="@{/mb}"> Here /!\ </a>
-		</section>
+		</section> -->
 
 		<!-- six -->
 		<section id="two">
@@ -102,11 +106,16 @@
 			<div class="row" >
 				<article class="6u 12u$(xsmall) work-item" th:each="memb : ${ourTeam}">
 					<a href="images/fulls/01.jpg" class="image fit thumb"> <img
-						src="images/thumbs/01.jpg" alt="" /></a> <a th:href="@{/mb/{pID}(pID=${memb.id})}" href="memberX" th:text="${memb.lastName}">
+						src="images/thumbs/01.jpg" class="img-rounded" alt="" /></a> <a th:href="@{/mb/{pID}(pID=${memb.id})}" href="memberX" th:text="${memb.lastName}">
 						Project x </a>
 					<p th:text="${memb.lastName}">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 
 				</article>
+			</div>
+			<div>
+			<ul class="actions">
+        			<li><a href="members" th:href="@{/mb}" class="button">View Members</a></li>
+			</ul>
 			</div>
 		</section>
 
