@@ -8,11 +8,23 @@
 <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 <link href="/assets/css/main.css" th:href="@{/assets/css/main.css}" rel="stylesheet" />
 <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+<link href="/assets/css/main.css" th:href="@{/assets/css/main.css}" rel="stylesheet" />
+	<link href="/assets/bootstrap/css/bootstrap.css" th:href="@{/assets/bootstrap/css/bootstrap.css}" rel="stylesheet" />
+
+	<script src="/scripts/jquery.min.js"></script>
+	<script src="/assets/bootstrap/js/bootstrap.js"></script>
+	<script src="/assets/js/header.js"></script>
+	
+	<!-- footer -->   
+	<link href="/assets/bootstrap/css/bootstrap.min.css" th:href="@{/assets/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+   <link href="/assets/font/css/font-awesome.min.css" th:href="@{/assets/font/css/font-awesome.min.css}" rel="stylesheet"/>
+   <link href="/assets/css/footer.css" th:href="@{/assets/css/footer.css}" rel="stylesheet"/>
+
 </head>
 <body id="top">
 
 	<!-- Header -->
-	<header id="header">
+	<header id="header" th:replace="header :: header" >
 		<div class="inner">
 			<div class ="avatar image" th:each="member : ${ourTeam}">
 				<a href="#"> 
@@ -34,7 +46,7 @@
 	<div id="main">
 		
 		<!-- Menu -->
-		<ul id="menu">
+	<!--  	<ul id="menu">
 	    <li><a href = "index" th:href="@{/}">Home</a></li>
 	    <li>
 	        <a href="#">Projet</a>
@@ -52,7 +64,7 @@
 	    </li>
 	    <li><a href="#">About</a></li>
 	    <li><a href="#">Contact</a></li>
-	</ul>
+	</ul> -->
 		
 		<!-- zero -->
 		<section id="zero">
@@ -62,8 +74,8 @@
 <!-- 			</header> -->
 			
 			<header class="major">
-				<h2>create a new member :-) </h2>
-				<ul><li><a href = "members" th:href="@{/mb(form)}"> Create here </a></li></ul>
+			<!--  	<h2>create a new member :-) </h2>-->
+				<ul class="actions"><li><a href = "members" th:href="@{/mb(form)}"  class="button"> Add Member </a></li></ul>
 			</header>
 			
 		</section>
@@ -76,15 +88,23 @@
 			<div class="row" >
 				<article class="6u 12u$(xsmall) work-item" th:each="memb : ${ourTeam}">
 					<a href="images/fulls/01.jpg" class="image fit thumb"> <img
-						src="images/thumbs/01.jpg" alt="" /></a> <a th:href="@{/mb/{pID}(pID=${memb.id})}" href="memberX" th:text="${memb.lastName}">
+						src="images/thumbs/01.jpg" class="img-circle" alt="" width="200" height="210" /></a> 
+						<a class="link-align" th:href="@{/mb/{pID}(pID=${memb.id})}" href="memberX" th:text="${memb.lastName}">
 						Project x </a>
-					<p th:text="${memb.lastName}">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+					<p th:text="${memb.firstName}">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
           
+           <ul class="icons">
+        <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+        <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+  </ul>
 				</article>
+				
 			</div>
 		</section>
 	
 	</div>
-
+<!-- Footer -->
+	<footer id="footer" th:replace="footer :: footer"></footer>
 </body>
 </html>

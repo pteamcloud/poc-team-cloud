@@ -52,7 +52,7 @@
 			
 			<header class="major">
 				<h2>Initiate a new project :-) </h2>
-				<ul><li><a href = "projects" th:href="@{/pj(form)}"> Create here </a></li></ul>
+				<ul class="actions"><li><a href = "projects" th:href="@{/pj(form)}" class="button"> Create here </a></li></ul>
 			</header>
 			
 		</section>
@@ -65,7 +65,7 @@
 			<div class="row" >
 				<article class="6u 12u$(xsmall) work-item" th:each="project : ${ourProject}">
 					<a href="images/fulls/01.jpg" class="image fit thumb"> <img
-						src="images/thumbs/01.jpg" alt="" /></a> <a th:href="@{/pj/{pID}(pID=${project.id})}" href="projectX" th:text="${project.name}">
+						src="images/thumbs/01.jpg" class="img-rounded" alt="" /></a> <a th:href="@{/pj/{pID}(pID=${project.id})}" href="projectX" th:text="${project.name}">
 						Project x </a>
 					<p th:text="${project.description}">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
           
@@ -77,20 +77,20 @@
 
 	<!-- Footer -->
 	<footer id="footer" th:replace="footer :: footer">
-		<div class="inner">
-			<ul class="icons">
-				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-				<li><a href="#" class="icon fa-dribbble"><span
-						class="label">Dribbble</span></a></li>
-				<li><a href="#" class="icon fa-envelope-o"><span
-						class="label">Email</span></a></li>
-			</ul>
-			<ul class="copyright">
-				<li>&copy; Untitled</li>
-				<li>Design: <a href="http://pocteamcloud.fr">Team-Cloud</a></li>
-			</ul>
-		</div>
+<!-- 		<div class="inner"> -->
+<!-- 			<ul class="icons"> -->
+<!-- 				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li> -->
+<!-- 				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li> -->
+<!-- 				<li><a href="#" class="icon fa-dribbble"><span -->
+<!-- 						class="label">Dribbble</span></a></li> -->
+<!-- 				<li><a href="#" class="icon fa-envelope-o"><span -->
+<!-- 						class="label">Email</span></a></li> -->
+<!-- 			</ul> -->
+<!-- 			<ul class="copyright"> -->
+<!-- 				<li>&copy; Untitled</li> -->
+<!-- 				<li>Design: <a href="http://pocteamcloud.fr">Team-Cloud</a></li> -->
+<!-- 			</ul> -->
+<!-- 		</div> -->
 	</footer>
 </body>
 </html>
