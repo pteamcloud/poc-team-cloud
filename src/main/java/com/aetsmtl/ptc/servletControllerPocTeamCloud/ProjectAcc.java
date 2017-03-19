@@ -51,24 +51,59 @@ public class ProjectAcc{
 		team = mDAO.findAllMember();
 		proj = pDAO.findAllMember();
 		
-		if (!checkIfListSizeIsMoreThanThree (proj)){
-			return "index";
-		}
+		List<Project> lp = (List<Project>)proj ;
+		List<Member> lm = (List<Member>)team;
 		
 		int lastIndex = ((List<Project>)proj).size();
-		List<Project> lp = ((List<Project>)proj).subList(lastIndex-2, lastIndex);
+		
+		if (checkIfListSizeOfProjectIsMoreThanThree (proj)){
+			lp = ((List<Project>)proj).subList(lastIndex-2, lastIndex);
+		}
+		
+		lastIndex = ((List<Member>)team).size();
+		
+		if (checkIfListSizeOfMemberIsMoreThanThree(team)){
+			lm = ((List<Member>)team).subList(lastIndex-2, lastIndex);
+		}
 
-		model.addAttribute("ourTeam", team);
+		model.addAttribute("ourTeam", lm);
 		model.addAttribute("ourProject", lp);
+		model.addAttribute("jumTitle", "Welcome to Poc-TeamCloud");
 		
 		return "index";
 	}
 	
-	private boolean checkIfListSizeIsMoreThanThree(Iterable<Project> proj2) {
+	@RequestMapping("/About-Us")
+	public String aboutsUs(Model model){
+		
+		logController.info("Making sure that we pass by this way index at / AboutUs");
+		
+		team = mDAO.findAllMember();
+		proj = pDAO.findAllMember();
+
+		model.addAttribute("ourTeam", team);
+		model.addAttribute("ourProject", proj);
+		model.addAttribute("jumTitle", "Everything about US!");
+
+		
+		return "aboutUs";
+	}
+	
+	private boolean checkIfListSizeOfProjectIsMoreThanThree(Iterable<Project> proj2) {
 		// TODO Auto-generated method stub
 		if (proj2 == null || 
 				((List<Project>)proj2).isEmpty() || 
 				((List<Project>)proj2).size() <= 1){
+					return false;
+				}
+		return true;
+	}
+	
+	private boolean checkIfListSizeOfMemberIsMoreThanThree(Iterable<Member> memb) {
+		// TODO Auto-generated method stub
+		if (memb == null || 
+				((List<Member>)memb).isEmpty() || 
+				((List<Member>)memb).size() <= 1){
 					return false;
 				}
 		return true;
