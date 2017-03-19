@@ -58,16 +58,17 @@ header {
 
 a {
 	margin: 0 0 0 0;
-		padding: 0 O 0 0;
+/* 		padding: 0 0 0 0; */
 		border: 0;
 		font-size: 100%;
 		font: inherit;
 		vertical-align: top;
 }
 
-a.link-align{
-	padding: 0 100px O 0;
+.align{
+	padding-left:1em;
 }
+
 
 	.button {
 		-moz-appearance: none;
@@ -875,7 +876,7 @@ ul {
 		ul.icons {
 			cursor: default;
 			list-style: none;
-			padding-left: 5em; /*Deplacer les icons*/
+			padding-left: 1em; /*Deplacer les icons*/
 
 		}
 
