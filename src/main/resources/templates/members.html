@@ -88,9 +88,10 @@
 			<div class="row" >
 				<article class="6u 12u$(xsmall) work-item" th:each="memb : ${ourTeam}">
 					<a href="images/fulls/01.jpg" class="image fit thumb"> <img
-						src="images/thumbs/01.jpg" class="img-circle" alt="" width="200" height="210" /></a> <a th:href="@{/mb/{pID}(pID=${memb.id})}" href="memberX" th:text="${memb.lastName}">
+						src="images/thumbs/01.jpg" class="img-circle" alt="" width="200" height="210" /></a> 
+						<a class="link-align" th:href="@{/mb/{pID}(pID=${memb.id})}" href="memberX" th:text="${memb.lastName}">
 						Project x </a>
-					<p th:text="${memb.lastName}">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+					<p th:text="${memb.firstName}">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
           
            <ul class="icons">
         <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
