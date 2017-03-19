@@ -39,7 +39,7 @@ public class ProjectController {
 		
 		model.addAttribute("ourTeam", mDAO.findAllMember());
 		model.addAttribute("ourProject", pDAO.findAllMember());
-		model.addAttribute("jname", "Project");
+		model.addAttribute("jumTitle", "Projects");
 		
 		return "projects";
 	}
@@ -49,13 +49,17 @@ public class ProjectController {
 		
 		model.addAttribute("ourTeam", pDAO.getMemberLinkedToProject(proj.getId()));
 		model.addAttribute("proj", proj);
+		model.addAttribute("jumTitle", proj.getName());
+
 		return "projectX";
 	}
 	
 	@RequestMapping(params = "form", method = RequestMethod.GET)
 	public String createPForm(Model model) {
-
+		
 		model.addAttribute("proj", new Project() );
+		//Add to header.views th:text=" 'Hello world from ' + ${jumTitle}"
+		model.addAttribute("jumTitle", "Create a new project");
 		
 		return "createProjectForm";
 	}

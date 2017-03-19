@@ -41,7 +41,8 @@ public class MemberController {
 		
 		model.addAttribute("ourTeam", mDAO.findAllMember());
 		model.addAttribute("ourProject", pDAO.findAllMember());
-		
+		model.addAttribute("jumTitle", "Members");
+
 		return "members";
 	}
 	
@@ -53,6 +54,8 @@ public class MemberController {
 		//Find all (projects, activity, using, etccc, ...) informations about this member
 		model.addAttribute("proj", mDAO.getProjectLinkedToMember(memb.getId()));
 		model.addAttribute("memb", memb);
+		model.addAttribute("jumTitle", memb.getSurName());
+
 		return "memberX";
 	}
 	
@@ -60,6 +63,7 @@ public class MemberController {
 	public String createMForm(Model model) {
 
 		model.addAttribute("memb", new Member());
+		model.addAttribute("jumTitle", "Create a new member");
 		
 		return "createMemberForm";
 	}
