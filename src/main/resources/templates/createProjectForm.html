@@ -9,10 +9,17 @@
 <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
 		   <link href="/assets/css/main.css" th:href="@{/assets/css/main.css}" rel="stylesheet" />
-		   <link href="/assets/bootstrap/css/bootstrap.css" th:href="@{/assets/bootstrap/css/bootstrap.css}" rel="stylesheet" />
-		   <script src="/scripts/jquery.min.js"></script>
-		   <script src="/assets/bootstrap/js/bootstrap.js"></script>
-		   <script src="/assets/js/header.js"></script>
+	<link href="/assets/bootstrap/css/bootstrap.css" th:href="@{/assets/bootstrap/css/bootstrap.css}" rel="stylesheet" />
+
+	<script src="/scripts/jquery.min.js"></script>
+	<script src="/assets/bootstrap/js/bootstrap.js"></script>
+	<script src="/assets/js/header.js"></script>
+	
+	<!-- footer -->   
+	<link href="/assets/bootstrap/css/bootstrap.min.css" th:href="@{/assets/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+   <link href="/assets/font/css/font-awesome.min.css" th:href="@{/assets/font/css/font-awesome.min.css}" rel="stylesheet"/>
+   <link href="/assets/css/footer.css" th:href="@{/assets/css/footer.css}" rel="stylesheet"/>
+
 </head>
 
 <body id="top">
@@ -35,7 +42,7 @@
 
 	<div id="main">
 		<!-- Menu -->
-		<ul id="menu">
+	<!--  	<ul id="menu">
 			<li><a href="index" th:href="@{/}">Home</a></li>
 			<li><a href="#">Projet</a>
 				<ul>
@@ -49,7 +56,7 @@
 				</ul></li>
 			<li><a href="#">About</a></li>
 			<li><a href="#">Contact</a></li>
-		</ul>
+		</ul>-->
 		<!-- ContainerBodyPage -->
 		<div class="container">
 			<form action="#" th:action="@{/pj/(createProjectForm)}"
@@ -80,6 +87,7 @@
 			</form>
 		</div>
 	</div>
-
+<!-- Footer -->
+	<footer id="footer" th:replace="footer :: footer"></footer>
 </body>
 </html>
