@@ -14,7 +14,7 @@
 	
 	<!-- footer -->   
 	<link href="/assets/bootstrap/css/bootstrap.min.css" th:href="@{/assets/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
-   <link href="/assets/css/font-awesome.min.css" th:href="@{/assets/css/font-awesome.min.css}" rel="stylesheet"/>
+   <link href="/assets/font/css/font-awesome.min.css" th:href="@{/assets/font/css/font-awesome.min.css}" rel="stylesheet"/>
    <link href="/assets/css/footer.css" th:href="@{/assets/css/footer.css}" rel="stylesheet"/>
 
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
@@ -85,7 +85,7 @@
 			</div>
 			<div>
 			<ul class="actions">
-        			<li><a href="Project" th:href="@{/pj}" class="button">Full Portfolio</a></li>
+        			<li><a href="Project" th:href="@{/pj}" class="button">view projects</a></li>
 			</ul>
 			</div>
 		</section>
@@ -106,10 +106,14 @@
 			<div class="row" >
 				<article class="6u 12u$(xsmall) work-item" th:each="memb : ${ourTeam}">
 					<a href="images/fulls/01.jpg" class="image fit thumb"> <img
-						src="images/thumbs/01.jpg" class="img-rounded" alt="" /></a> <a th:href="@{/mb/{pID}(pID=${memb.id})}" href="memberX" th:text="${memb.lastName}">
+						src="images/thumbs/01.jpg"  alt=""  class="img-circle" width="200" height="210"/></a> <a th:href="@{/mb/{pID}(pID=${memb.id})}" href="memberX" th:text="${memb.lastName}">
 						Project x </a>
 					<p th:text="${memb.lastName}">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-
+ <ul class="icons">
+        <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+        <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+  </ul>
 				</article>
 			</div>
 			<div>
