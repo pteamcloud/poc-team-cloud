@@ -90,7 +90,9 @@
 			</div>
 			
 			<div>
-				<form method="post" th:action="@{/pj/{id}/proj(id=${proj.id}, pId=${proj.id})}">
+<!-- 				<form method="post" th:action="@{/pj/{id}/proj(id=${proj.id}, pId=${proj.id})}"> -->
+				<form method="post" th:action="@{/pj/{id}/d(id=${proj.id})}">
+				
 				<input type="submit" value="Delete this project"></input>
 			</form>
 			</div>
