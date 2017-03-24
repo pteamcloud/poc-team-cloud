@@ -59,7 +59,7 @@
 		</ul>-->
 		<!-- ContainerBodyPage -->
 		<div class="container">
-			<form action="#" th:action="@{/pj/cr}"
+			<form action="#" th:action="@{/pj/{id}/up(id=${proj.id})}"
 				th:object="${proj}" method="post">
 <!-- 				<div> -->
 <!-- 					<a href="index" th:href="@{/}"> Return to Home page </a> -->
@@ -67,7 +67,7 @@
 				<!-- create a project -->
 				<div>
 					<br></br>
-					<h2>Create a project</h2>
+					<h2>Update a project</h2>
 					<br></br>
 				</div>
 				<div>
@@ -82,7 +82,7 @@
 <!-- 					<label for="contributors">Contributors</label>  -->
 <!-- 					<input type="text" th:field="*{contributors}"/> -->
 					<br></br><br></br>
-					<input type="submit" value="Create" />
+					<input type="submit" value="Update" />
 				</div>
 			</form>
 		</div>

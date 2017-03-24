@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -55,17 +56,17 @@ public class ProjectController {
 	}
 	
 	@RequestMapping(params = "form", method = RequestMethod.GET)
-	public String createPForm(Model model) {
-		
-		model.addAttribute("proj", new Project() );
-		//Add to header.views th:text=" 'Hello world from ' + ${jumTitle}"
-		model.addAttribute("jumTitle", "Create a new project");
-		
+	public String createPForm(@RequestParam("form") String form, Model model) {
+			
+			model.addAttribute("proj", new Project() );
+			//Add to header.views th:text=" 'Hello world from ' + ${jumTitle}"
+			model.addAttribute("jumTitle", "Create a new project");
+			
 		return "createProjectForm";
 	}
 
-	@RequestMapping(method = RequestMethod.POST)
-	public ModelAndView create(@Valid Project proj, BindingResult result,
+	@RequestMapping(value="cr", method = RequestMethod.POST)
+	public ModelAndView create(@PathVariable("id") String pId, @Valid Project proj, BindingResult result,
 			RedirectAttributes redirect) {
 		if (result.hasErrors()) {
 			return new ModelAndView("createProjectForm", "formErrors", result.getAllErrors());
@@ -77,8 +78,8 @@ public class ProjectController {
 		return new ModelAndView("redirect:/pj/{proj.id}", "proj.id", proj.getId());
 	}
 	
-	@RequestMapping(value="{id}/proj", params = "pId", method = RequestMethod.POST)
-	public ModelAndView deleteP(@PathVariable("id") String pId, RedirectAttributes redirect) {
+	@RequestMapping(value="{id}/d", method = RequestMethod.POST)
+	public ModelAndView delete(@PathVariable("id") String pId, RedirectAttributes redirect) {
 		
 		
 		projectControllerLogger.info(" $$$ Deleting a project");
@@ -88,5 +89,28 @@ public class ProjectController {
 		return new ModelAndView ("redirect:/pj");
 	}
 	
+	@RequestMapping(value="{id}/u", method = RequestMethod.GET)
+	public String updatePForm(@PathVariable("id") String pId, Model model) {
+		
+		model.addAttribute("proj", pDAO.findProjectX(Long.parseLong(pId)));
+		//Add to header.views th:text=" 'Hello world from ' + ${jumTitle}"
+		model.addAttribute("jumTitle", "updating This project");
+		
+		return "updateProjectForm";
+	}
+	
+	@RequestMapping(value="{id}/up", method = RequestMethod.POST)
+	public ModelAndView update(@PathVariable("id") String pId, @Valid Project proj, BindingResult result,
+			RedirectAttributes redirect) {
+		if (result.hasErrors()) {
+			return new ModelAndView("updateProjectForm", "formErrors", result.getAllErrors());
+		}
+		proj.setId(Long.parseLong(pId));
+		if (pDAO.saveProject(proj)){
+			System.out.println(proj.toString());
+		};
+		redirect.addFlashAttribute("globalMessage", "Successfully update this project");
+		return new ModelAndView("redirect:/pj/{proj.id}", "proj.id", proj.getId());
+	}
 	
 }

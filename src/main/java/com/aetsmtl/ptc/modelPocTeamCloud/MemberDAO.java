@@ -35,7 +35,7 @@ public class MemberDAO {
 	}
 	
 	public boolean saveMember (Member p){
-		logProjectDAO.info("Saving an member $$$$$");
+		logProjectDAO.info("Saving a member $$$$$");
 		if (p.equals(memberRepo.save(p))){
 			return true;
 		}
