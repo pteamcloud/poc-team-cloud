@@ -78,7 +78,7 @@ public class ProjectController {
 	}
 	
 	@RequestMapping(value="{id}/proj", params = "pId", method = RequestMethod.POST)
-	public ModelAndView deleteP(@PathVariable("id") String pId, RedirectAttributes redirect) {
+	public ModelAndView delete(@PathVariable("id") String pId, RedirectAttributes redirect) {
 		
 		
 		projectControllerLogger.info(" $$$ Deleting a project");

@@ -69,7 +69,7 @@ public class MemberController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public ModelAndView createM(@Valid Member memb, BindingResult result,
+	public ModelAndView create(@Valid Member memb, BindingResult result,
 			RedirectAttributes redirect) {
 		if (result.hasErrors()) {
 			return new ModelAndView("createMemberForm", "formErrors", result.getAllErrors());
@@ -81,8 +81,8 @@ public class MemberController {
 		return new ModelAndView("redirect:/mb/{memb.id}", "memb.id", memb.getId());
 	}
 	
-	@RequestMapping(value="{id}", params = "pId", method = RequestMethod.POST)
-	public ModelAndView deleteM(@PathVariable("id") String pId, RedirectAttributes redirect) {
+	@RequestMapping(value="{id}/memb", params = "pId", method = RequestMethod.POST)
+	public ModelAndView delete(@PathVariable("id") String pId, RedirectAttributes redirect) {
 		
 		
 		memberControllerLogger.info(" $$$ Deleting a Member");
