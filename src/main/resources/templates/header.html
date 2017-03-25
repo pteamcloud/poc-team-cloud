@@ -48,15 +48,25 @@
 			      <li class="dropdown">
 			      <a  class="dropdown-toggle" data-toggle="dropdown" href="#">Project<span class="caret"></span></a>
 			      		<ul class="dropdown-menu">
-            					<li><a href="#" ><span class="glyphicon glyphicon-cloud"></span>Virtualization</a></li>
-            						<li><a href="#">DevOps</a></li>
-            						<li><a href="#">Embedded System</a></li>
-            						<li><a href="#">Security</a></li>
-            						<li><a href="#">Network</a></li>
-            						<li><a href="#">Web Programming</a></li>
+            						<li><a href="#" ><span class="glyphicon glyphicon-cloud"></span>Virtualization</a></li>
+            						<li><a href="#"><span class="glyphicon glyphicon-cog"></span>DevOps</a></li>
+            						<li><a href="#"><span class="glyphicon glyphicon-phone"></span>Embedded System</a></li>
+            						<li><a href="#"><span class="glyphicon glyphicon-lock"></span>Security</a></li>
+            						<li><a href="#"><span class="glyphicon glyphicon-signal"></span>Network</a></li>
+            						<li><a href="#"><span class="glyphicon glyphicon-globe"></span>Web Programming</a></li>
+            						<li class="divider"></li>
+            						<li><a href = "projects" th:href="@{/pj(form)}"><span class="glyphicon glyphicon-plus"></span>Add Project</a></li>
+            						<li><a href="projects" th:href="@{/pj}"><span class="glyphicon glyphicon-list-alt"></span>View Project</a></li>
+        
           				</ul>
 			      </li>
-			      <li><a href="members" th:href="@{/mb}">Member</a></li>
+			      <li class="dropdown">
+			      <a class="dropdown-toggle" data-toggle="dropdown" href="#" >Member<span class="caret"></span></a>
+			      		<ul class="dropdown-menu">
+			      			<li><a href = "members" th:href="@{/mb(form)}"><span class="glyphicon glyphicon-plus"></span>Add Member</a></li>
+            				<li><a href="members" th:href="@{/mb}"><span class="glyphicon glyphicon-list-alt"></span>View Member</a></li>
+			      		</ul>
+			      </li>
 			      <li><a href="#contact">About</a></li>
 			      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 			    </ul>

@@ -1024,3 +1024,7 @@ ul {
 li.dropdown:hover > .dropdown-menu {
     display: block;
 }
+
+span{
+	width: 20px;
+}
