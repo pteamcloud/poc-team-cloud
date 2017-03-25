@@ -67,9 +67,7 @@
 		<!-- four -->
 		<section id="one">
 		<div >
-			<h4>
-				<a th:href="@{/pj}" href="projects.html"> Return to all of our projects</a>
-			</h4>
+			<ul class="actions"><li><a href = "projects.html" th:href="@{/pj}"  class="button"> View Projects</a></li></ul>
 		</div>
 			<header class="major">
 				<h1 th:text="' The name of this project is ' + ${proj.name}"></h1>
@@ -95,6 +93,7 @@
 				
 				<input type="submit" value="Delete this project"></input>
 			</form>
+			<ul class="actions"><li><a href = "projects" th:href="@{/pj(form)}"  class="button"> Modify</a></li></ul>
 			</div>
 		</section>
 
