@@ -91,7 +91,7 @@
 				<form method="post" th:action="@{/mb/{id}/d(id=${memb.id})}">
 				<input type="submit" value="Delete this member"></input>
 			</form>
-			<ul class="actions"><li><a href = "members" th:href="@{/mb(form)}"  class="button"> Modify</a></li></ul>
+			<ul class="actions"><li><a href = "members" th:href="@{/mb/{id}/u(id=${memb.id})}"  class="button"> Modify</a></li></ul>
 			</div>
 		</section>
 
