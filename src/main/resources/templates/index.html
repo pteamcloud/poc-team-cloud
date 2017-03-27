@@ -24,32 +24,37 @@
 
 	<!-- Header -->
 	<header id="header" th:replace="header :: header" >
-		<div class="inner">
-			<div class ="avatar image" th:each="member : ${ourTeam}">
-				<a href="#">
-					<img src="/images/avatar.jpg" alt="" />
-				</a>
-				<br/>
-				<span th:text="${member.lastName}">name</span>
-				<!-- <br/> -->
-				<!-- <p th:text="${member.role}">role</p> -->
-				<ul class="icons">
-				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-				<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-			</ul>
-			</div>
-		</div>
+<!-- 		<div class="inner"> -->
+<!-- 			<div class ="avatar image" th:each="member : ${ourTeam}"> -->
+<!-- 				<a href="#"> -->
+<!-- 					<img src="/images/avatar.jpg" alt="" /> -->
+<!-- 				</a> -->
+<!-- 				<br/> -->
+<!-- 				<span th:text="${member.lastName}">name</span> -->
+<!-- 				<br/> -->
+<!-- 				<p th:text="${member.role}">role</p> -->
+<!-- 				<ul class="icons"> -->
+<!-- 				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li> -->
+<!-- 				<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li> -->
+<!-- 			</ul> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
 	</header>
 
 	<!-- Main -->
 
 	<div id="main" class="container">
 		<!-- One -->
+	
+		<div class="row row-content">
+		<div class="col-xs-12 col-sm-9">
 		<section id="one">
-			<header class="major">
-				<h2>About US.</h2>
+		
+			<header class="major text-justify">
+				<h2 >About US.</h2>
 			</header>
-			<p>	<strong> We are P-T-C !</strong> The team, <br /> which think
+			
+			<p class="text-justify">	<strong> We are P-T-C !</strong> The team, <br /> which think
 				perform and realize the implementation and the maintain of this
 				platform <br /> here are our gitHub <a
 					href="https://github.com/Aetsmtl/poc-team-cloud">
@@ -58,9 +63,13 @@
 <!-- 			<ul class="actions"> -->
 <!-- 				<li><a href="#" class="button">Learn More</a></li> -->
 <!-- 			</ul> -->
-
+		
 		</section>
+<!-- 		</div> -->
+		
 
+		
+		
 		<!-- four -->
 		<!--  <section id="one">
 			<header class="major">
@@ -70,7 +79,9 @@
 		</section> -->
 
 		<!-- Two -->
+		
 		<section id="two">
+		
 			<header class="major">
 				<h2>Recent Works</h2>
 			</header>
@@ -88,8 +99,9 @@
         			<li><a href="Project" th:href="@{/pj}" class="button">view projects</a></li>
 			</ul>
 			</div>
+			
 		</section>
-
+		
 		<!-- five -->
 		<!-- <section id="one">
 			<header class="major">
@@ -97,9 +109,12 @@
 			</header>
 			<a href = "members" th:href="@{/mb}"> Here /!\ </a>
 		</section> -->
-
+		
+		
 		<!-- six -->
+		
 		<section id="two">
+		
 			<header class="major">
 				<h2>Recent Members</h2>
 			</header>
@@ -127,10 +142,16 @@
         			<li><a href="members" th:href="@{/mb}" class="button">View Members</a></li>
 			</ul>
 			</div>
+			
 		</section>
-
+		
+	
+		
 		<!-- Three -->
+		
+		
 		<section id="three">
+		
 			<header class="major">
 				<h2>Get In Touch</h2>
 			</header>
@@ -139,8 +160,13 @@
 				lorem vulputate lorem neque lorem ipsum dolor.</p>
 			<div class="row">
 				</div>
+				
 		</section>
-	</div>
+		</div>
+		</div>
+		</div>
+		
+
 
 	<!-- Footer -->
 	<footer id="footer" th:replace="footer :: footer"></footer>
