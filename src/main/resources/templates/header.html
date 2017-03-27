@@ -4,7 +4,9 @@
 	<head>
 <!-- 		<title>PoC-TeamCloud</title> -->
 		   <meta charset="utf-8" />
+		   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+		   
 		   <link href="/assets/css/main.css" th:href="@{/assets/css/main.css}" rel="stylesheet" />
 		   <link href="/assets/bootstrap/css/bootstrap.css" th:href="@{/assets/bootstrap/css/bootstrap.css}" rel="stylesheet" />
 		   <link href="/assets/bootstrap/css/bootstrap-theme.min.css" th:href="@{/assets/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet" />
@@ -18,24 +20,31 @@
 		<header th:fragment="header">
 <!-- 		  <div class="container" > -->
 		  <!-- nav-bar -->
-		<nav class="navbar navbar-default navbar-fixed-top  marginBottom-0" role="navigation" >
-			
+<!-- 		<nav class="navbar navbar-inverse navbar-fixed-top  marginBottom-0" role="navigation" > -->
+ 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation" >
+ 		
 			<div class="container">
 <!--       			 <div class="row"> -->
 					  <div class="navbar-header">
-						    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarcollapse">
-						      <span class="sr-only">Toggle navigation</span>
+						    <button type="button" 
+						    		class="navbar-toggle collapsed"
+						   			data-toggle="collapse" 
+						   			data-target="#navbar"
+						   			aria-expanded="false" 
+						   			aria-controls="navbar">
+						   			
+<!-- 						      <span class="sr-only">Toggle navigation</span> -->
 						      <span class="icon-bar"></span>
 						      <span class="icon-bar"></span>
 						      <span class="icon-bar"></span>
 						    </button>  
-						    <ul class="nav navbar-nav navbar-left">
-			 			       <li> <a class="nav-brand" href="#index" th:href="@{/}">PoC-TeamCloud</a></li>
-						     </ul>
-					  </div>
+						  
+			 			    <br/><a class="nav-brand" href="#index" th:href="@{/}">PoC-TeamCloud</a>
+						    
+					   </div>
 				 
-				
-			  <div class="navbar-collapse collapse" id="navbarcollapse">
+			  
+			  <div id="navbar" class="navbar-collapse collapse" >
 					    <div class="col-sm-3 col-md-3">
 					        <form class="navbar-form" role="search">
 						        <div class="input-group">
@@ -81,6 +90,7 @@
 		</nav>
 <!-- 		  </div> -->
 		  <div class="jumbotron">
+		   <p style="padding:10px;"></p>
 		  	<div class="title">
 		      <h1 th:text=" '# ' + ${jumTitle}">TeamCloud</h1>
 		     <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
