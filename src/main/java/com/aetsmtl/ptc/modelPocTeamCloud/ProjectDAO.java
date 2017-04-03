@@ -34,7 +34,8 @@ public class ProjectDAO {
 	}
 	
 	public boolean saveProject (Project p){
-		logProjectDAO.info("Saving an Project $$$$$");
+		logProjectDAO.info("Saving a Project $$$$$");
+		logProjectDAO.info(" id of this project "+p.getId());
 		if (p.equals(projectRepo.save(p))){
 			
 			return true;

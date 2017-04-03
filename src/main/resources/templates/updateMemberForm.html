@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Project : Create</title>
+<title>Member : Updating</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -59,30 +59,31 @@
 		</ul>-->
 		<!-- ContainerBodyPage -->
 		<div class="container">
-			<form action="#" th:action="@{/pj/cr}"
-				th:object="${proj}" method="post">
+			<form action="#" th:action="@{/mb/{id}/up(id=${memb.id})}"
+				th:object="${memb}" method="post">
 <!-- 				<div> -->
 <!-- 					<a href="index" th:href="@{/}"> Return to Home page </a> -->
 <!-- 				</div> -->
 				<!-- create a project -->
 				<div>
 					<br></br>
-					<h2>Create a project</h2>
+					<h2>Update a Member</h2>
 					<br></br>
 				</div>
 				<div>
-					<label for="name">Name</label> 
-					<input type="text" th:field="*{name}" /> 	
-					<label for="description">Description</label> 
-					<input type="text" th:field="*{description}"/> 
-					<label for="versionningLink">Versionning link</label> 
-					<input type="text" th:field="*{versionningLink}"/>
+					<label for="surname">surName</label> 
+					<input type="text" th:field="*{surName}" /> 	
+					<label for="lastName">lastName</label> 
+					<input type="text" th:field="*{lastName}"/> 
+					<label for="linkedinUrlRef">linkedIn Url Ref</label> 
+					<input type="text" th:field="*{linkedinUrlRef}"/>
+					
 <!-- 					<label for="versionningLink">Versionning link</label>  -->
 <!-- 					<input type="url" th:field="*{versionningLink}"/> -->
-<!-- 					<label for="contributors">Contributors</label>  -->
+<!-- 					<label for="contributions">Contributors</label>  -->
 <!-- 					<input type="text" th:field="*{contributors}"/> -->
 					<br></br><br></br>
-					<input type="submit" value="Create" />
+					<input type="submit" value="Update" />
 				</div>
 			</form>
 		</div>
