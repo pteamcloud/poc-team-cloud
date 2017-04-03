@@ -24,7 +24,7 @@
 <body >
 
 	<!-- Header -->
-	<header id="header" th:replace="header :: header" >
+	<header th:replace="header :: header" >
 <!-- 		<div class="inner"> -->
 <!-- 			<div class ="avatar image" th:each="member : ${ourTeam}"> -->
 <!-- 				<a href="#"> -->
@@ -44,28 +44,23 @@
 
 	<!-- Main -->
 
-	<div id="main" class="container">
+	<div class="container">
 		<!-- One -->
-	
-		<div class="row row-content">
-		<div class="col-xs-12 col-sm-9">
-		<section id="one">
-		
+		<div class="col-xs-12 col-sm-12">
+<!-- 		<div class="col-xs-12"> -->
 			<header class="major text-justify">
 				<h2 >About US.</h2>
 			</header>
 			
-			<p class="text-justify">	<strong> We are P-T-C !</strong> The team, <br /> which think
+			<p class="text-justify">	<strong> We are P-T-C !</strong> The team, which think
 				perform and realize the implementation and the maintain of this
-				platform <br /> here are our gitHub <a
+				platform here are our gitHub <a
 					href="https://github.com/Aetsmtl/poc-team-cloud">
 					pocTeamCloud-Open-Source-GitHub-Project</a>.<br /> And we are just
 				below ! </p>
 <!-- 			<ul class="actions"> -->
 <!-- 				<li><a href="#" class="button">Learn More</a></li> -->
 <!-- 			</ul> -->
-		
-		</section>
 <!-- 		</div> -->
 		
 
@@ -88,9 +83,10 @@
 			</header>
 			<div class="row" >
 				<article class="6u 12u$(xsmall) work-item" th:each="project : ${ourProject}">
-					<a href="images/fulls/01.jpg" class="image fit thumb "> <img
-						src="images/thumbs/01.jpg" class="img-rounded" alt="" /></a> <a th:href="@{/pj/{pID}(pID=${project.id})}" href="projectX" th:text="${project.name}">
-						Project x </a>
+					<p><a href="images/fulls/01.jpg" class="image fit thumb "> <img
+						src="images/thumbs/01.jpg" class="img-rounded img-responsive " alt=""/></a></p>
+					<p><a th:href="@{/pj/{pID}(pID=${project.id})}" href="projectX" th:text="${project.name}">
+						Project x </a></p>
 					<p th:text="${project.description}">Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 
 				</article>
@@ -150,21 +146,19 @@
 		
 		<!-- Three -->
 		
-		
-		<section id="three">
-		
+
 			<header class="major">
 				<h2>Get In Touch</h2>
 			</header>
+			
 			<p>Accumsan pellentesque commodo blandit enim arcu non at amet id
 				arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi
 				lorem vulputate lorem neque lorem ipsum dolor.</p>
-			<div class="row">
-				</div>
-				
-		</section>
+			
+			<div class="row"></div>
+
 		</div>
-		</div>
+
 		</div>
 		
 
