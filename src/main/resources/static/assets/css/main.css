@@ -21,8 +21,8 @@ header {
 
 		#main > section {
 			border-top: solid 2px #efefef;
-			margin: 4em 0 0 0;
-			padding: 4em 0 0 0;
+			margin: 2em 0 0 0;
+			padding: 6em 0 0 0;
 		}
 
 			#main > section:first-child {
@@ -39,8 +39,8 @@ header {
 .work-item {
 		margin: 2em;
 		float: left;
-		padding-left: 0;
-		width: 30%;
+		padding-left: O;
+		width: 41%;
 
 	}
 	
@@ -1012,3 +1012,19 @@ ul {
 		.icon > .label {
 			display: none;
 		}
+		
+		
+
+.navbar-default .navbar-nav > li.dropdown:hover > a, 
+.navbar-default .navbar-nav > li.dropdown:hover > a:hover,
+.navbar-default .navbar-nav > li.dropdown:hover > a:focus {
+    background-color: rgb(231, 231, 231);
+    color: rgb(85, 85, 85);
+}
+li.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+span{
+	width: 20px;
+}

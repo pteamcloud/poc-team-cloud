@@ -2,17 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>project : NAME OF PROJECT</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-<link href="/assets/css/main.css" th:href="@{/assets/css/main.css}" rel="stylesheet" />
-<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif] href="assets/css/main.css-->
-
-
-<link href="/assets/css/main.css" th:href="@{/assets/css/main.css}" rel="stylesheet" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link href="/assets/css/main.css" th:href="@{/assets/css/main.css}" rel="stylesheet" />
 	<link href="/assets/bootstrap/css/bootstrap.css" th:href="@{/assets/bootstrap/css/bootstrap.css}" rel="stylesheet" />
 
-	<script src="/scripts/jquery.min.js"></script>
+	<script src="/assets/scripts/jquery.min.js"  th:href="@{/assets/scripts/jquery.min.js}"></script>
 	<script src="/assets/bootstrap/js/bootstrap.js"></script>
 	<script src="/assets/js/header.js"></script>
 	
@@ -20,6 +17,8 @@
 	<link href="/assets/bootstrap/css/bootstrap.min.css" th:href="@{/assets/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
    <link href="/assets/font/css/font-awesome.min.css" th:href="@{/assets/font/css/font-awesome.min.css}" rel="stylesheet"/>
    <link href="/assets/css/footer.css" th:href="@{/assets/css/footer.css}" rel="stylesheet"/>
+
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
 <body id="top">
 
@@ -67,9 +66,7 @@
 		<!-- four -->
 		<section id="one">
 		<div >
-			<h4>
-				<a th:href="@{/mb}" href="members.html"> Return to all of our members</a>
-			</h4>
+			<ul class="actions"><li><a href = "members.html"  th:href="@{/mb}" class="button"> View Members</a></li></ul>	
 		</div>
 			<header class="major">
 				<h1 th:text="' The name of this member is ' + ${memb.lastName}"></h1>
@@ -90,9 +87,11 @@
 			</div>
 			
 			<div>
-				<form method="post" th:action="@{/mb/{id}/d(id=${memb.id})}">
-				<input type="submit" value="Delete this member"></input>
+			<form method="post" th:action="@{/mb/{id}/d(id=${memb.id})}">
+				<input class="button" type="submit" value="Delete this member"></input>
 			</form>
+<!-- 			<ul class="actions"><li><a  th:action="@{/mb/{id}/d(id=${memb.id})}" class="button">Delete</a></li></ul> -->
+			<ul class="actions"><li><a href = "members" th:href="@{/mb/{id}/u(id=${memb.id})}"  class="button"> Modify</a></li></ul>
 			</div>
 		</section>
 
