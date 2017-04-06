@@ -2,14 +2,10 @@ package com.aetsmtl.ptc.servletControllerPocTeamCloud;
 
 import javax.validation.Valid;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,9 +21,9 @@ import com.aetsmtl.ptc.modelPocTeamCloud.ProjectDAO;
 @RequestMapping("pj")
 public class ProjectController {
 
-	private static final Logger projectControllerLogger = 
-			LoggerFactory.getLogger(ProjectController.class);
-	
+//	private static final Logger projectControllerLogger = 
+//			LoggerFactory.getLogger(ProjectController.class);
+
 	@Autowired
 	private ProjectDAO pDAO;
 	@Autowired
@@ -35,9 +31,7 @@ public class ProjectController {
 	
 	@RequestMapping
 	public String getProjects(Model model){
-	
-		projectControllerLogger.info(" $$$ Response from ProjectControllerRoot");
-		
+			
 		model.addAttribute("ourTeam", mDAO.findAllMember());
 		model.addAttribute("ourProject", pDAO.findAllMember());
 		model.addAttribute("jumTitle", "Projects");
@@ -80,12 +74,8 @@ public class ProjectController {
 	
 	@RequestMapping(value="{id}/d", method = RequestMethod.POST)
 	public ModelAndView delete(@PathVariable("id") String pId, RedirectAttributes redirect) {
-		
-		
-		projectControllerLogger.info(" $$$ Deleting a project");
-		
-		pDAO.deleteProject(Long.parseLong(pId));
-		
+			
+		pDAO.deleteProject(Long.parseLong(pId));	
 		return new ModelAndView ("redirect:/pj");
 	}
 	

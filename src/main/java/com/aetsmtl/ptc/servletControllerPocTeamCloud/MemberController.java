@@ -2,15 +2,10 @@ package com.aetsmtl.ptc.servletControllerPocTeamCloud;
 
 import javax.validation.Valid;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,7 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.aetsmtl.ptc.beanPocTeamCloud.Member;
-import com.aetsmtl.ptc.beanPocTeamCloud.Project;
 import com.aetsmtl.ptc.modelPocTeamCloud.MemberDAO;
 import com.aetsmtl.ptc.modelPocTeamCloud.ProjectDAO;
 
@@ -26,8 +20,8 @@ import com.aetsmtl.ptc.modelPocTeamCloud.ProjectDAO;
 @RequestMapping("mb")
 public class MemberController {
 
-	private static final Logger memberControllerLogger = 
-			LoggerFactory.getLogger(MemberController.class);
+//	private static final Logger memberControllerLogger = 
+//			LoggerFactory.getLogger(MemberController.class);
 	
 	@Autowired
 	private ProjectDAO pDAO;
@@ -36,9 +30,7 @@ public class MemberController {
 	
 	@RequestMapping
 	public String getMembers(Model model){
-	
-		memberControllerLogger.info(" $$$ Response from MemberControllerRoot");
-		
+			
 		model.addAttribute("ourTeam", mDAO.findAllMember());
 		model.addAttribute("ourProject", pDAO.findAllMember());
 		model.addAttribute("jumTitle", "Members");
@@ -49,9 +41,6 @@ public class MemberController {
 	@RequestMapping("{id}")
 	public String getAMember (@PathVariable("id") Member memb, Model model){
 		
-		
-		//model.addAttribute("ourTeam", mDAO.findAllMember());
-		//Find all (projects, activity, using, etccc, ...) informations about this member
 		model.addAttribute("proj", mDAO.getProjectLinkedToMember(memb.getId()));
 		model.addAttribute("memb", memb);
 		model.addAttribute("jumTitle", memb.getSurName());
@@ -84,7 +73,6 @@ public class MemberController {
 	@RequestMapping(value="{id}/d", method = RequestMethod.POST)
 	public ModelAndView delete(@PathVariable("id") String pId, RedirectAttributes redirect) {
 		
-		memberControllerLogger.info(" $$$ Deleting a Member");
 		mDAO.deleteMember(Long.parseLong(pId));
 		return new ModelAndView ("redirect:/mb");
 	}
