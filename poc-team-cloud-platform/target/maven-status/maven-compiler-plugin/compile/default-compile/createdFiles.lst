@@ -1,0 +1,12 @@
+com/aetsmtl/ptc/modelPocTeamCloud/MemberRepository.class
+com/aetsmtl/ptc/ServletInitializer.class
+com/aetsmtl/ptc/modelPocTeamCloud/MemberDAO.class
+com/aetsmtl/ptc/beanPocTeamCloud/Member.class
+com/aetsmtl/ptc/servletControllerPocTeamCloud/MemberController.class
+com/aetsmtl/ptc/modelPocTeamCloud/ProjectRepository.class
+com/aetsmtl/ptc/beanPocTeamCloud/Project.class
+com/aetsmtl/ptc/servletControllerPocTeamCloud/ProjectController.class
+com/aetsmtl/ptc/PtcApplication.class
+com/aetsmtl/ptc/WebSecurityConfig.class
+com/aetsmtl/ptc/modelPocTeamCloud/ProjectDAO.class
+com/aetsmtl/ptc/servletControllerPocTeamCloud/ProjectAcc.class

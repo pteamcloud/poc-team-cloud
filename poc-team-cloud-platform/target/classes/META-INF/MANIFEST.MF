@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: poc-team-cloud-platform
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: arnoldfotsing
+Implementation-Vendor-Id: org.ptc.platform
+Build-Jdk: 1.8.0_112
+Implementation-URL: http://maven.apache.org/poc-team-cloud-platform
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
