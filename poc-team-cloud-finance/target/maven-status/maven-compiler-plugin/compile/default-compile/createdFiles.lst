@@ -1,0 +1,11 @@
+com/ptc/finance/domain/PTCAccount.class
+com/ptc/finance/domain/City.class
+com/ptc/finance/service/HotelRepository.class
+com/ptc/finance/FinanceRestApplication.class
+com/ptc/finance/domain/Hotel.class
+com/ptc/finance/service/ContributionRepository.class
+com/ptc/finance/service/PTCUserNameRepository.class
+com/ptc/finance/domain/Contribution.class
+com/ptc/finance/service/CitySearchCriteria.class
+com/ptc/finance/service/CityRepository.class
+com/ptc/finance/domain/PTCUserName.class
