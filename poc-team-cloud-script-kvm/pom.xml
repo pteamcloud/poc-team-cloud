@@ -5,5 +5,9 @@
     <artifactId>Poc-team-cloud-platform</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
+  
   <artifactId>poc-team-cloud-script-kvm</artifactId>
+  <name>Poc-team-cloud Script KVM</name>
+  <description>Poc-team-cloud Script KVM</description>
+  
 </project>
