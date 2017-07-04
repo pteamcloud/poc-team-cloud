@@ -39,7 +39,7 @@
 		</div>
 	</header>
 
-	<div id="main">
+	<div class="container">
 		<!-- Menu -->
 	<!--  	<ul id="menu">
 			<li><a href="index" th:href="@{/}">Home</a></li>
@@ -57,6 +57,7 @@
 			<li><a href="#">Contact</a></li>
 		</ul>-->
 		<!-- ContainerBodyPage -->
+		<div class="col-xs-12 col-sm-12">
 		<div class="container">
 			<form action="#" th:action="@{/pj/{id}/up(id=${proj.id})}"
 				th:object="${proj}" method="post">
@@ -85,6 +86,7 @@
 				</div>
 			</form>
 		</div>
+	</div>
 	</div>
 <!-- Footer -->
 	<footer id="footer" th:replace="footer :: footer"></footer>

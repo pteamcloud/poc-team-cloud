@@ -42,7 +42,7 @@
 	</header>
 
 	<!-- Main -->
-	<div id="main">
+	<div class="container">
 	
 	<!-- Menu -->
  <!-- 	<ul id="menu">
@@ -65,6 +65,7 @@
     <li><a href="#">Contact</a></li>
  </ul> -->
 		<!-- four -->
+		<div class="col-xs-12 col-sm-12">
 		<section id="one">
 		<div >
 			<ul class="actions"><li><a href = "projects.html" th:href="@{/pj}"  class="button"> View Projects</a></li></ul>
@@ -96,7 +97,7 @@
 			<ul class="actions"><li><a href = "projectX" th:href="@{/pj/{id}/u(id=${proj.id})}"  class="button"> Modify</a></li></ul>
 			</div>
 		</section>
-
+	</div>
 	</div>
 	<!-- Footer -->
 	<footer id="footer" th:replace="footer :: footer"></footer>
