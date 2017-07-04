@@ -29,6 +29,8 @@
 	<modules>
 		<module>poc-team-cloud-platform</module>
 		<module>poc-team-cloud-finance</module>
+		<module>poc-team-cloud-script-ci</module>
+		<module>poc-team-cloud-script-kvm</module>
 	</modules>
 	
 </project>

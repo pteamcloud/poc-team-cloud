@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.aetsmtl.ptc.servletControllerPocTeamCloud.PtcSimpleApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.426 sec - in com.aetsmtl.ptc.servletControllerPocTeamCloud.PtcSimpleApplicationTests
