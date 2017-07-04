@@ -2,8 +2,6 @@ package com.aetsmtl.ptc.servletControllerPocTeamCloud;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -27,27 +25,15 @@ public class ProjectAcc{
 	private Iterable<Member> team;
 	private Iterable<Project> proj;
 	
- 	private static final Logger logController = LoggerFactory.getLogger(ProjectAcc.class);
-	private static final String PATH = "/error";
+// 	private static final Logger logController = LoggerFactory.getLogger(ProjectAcc.class);
+//	private static final String PATH = "/error";
 	
 	@Value("${qui.n: Aetsmtl}")
 	private String qui;
 	
-//	public String getErrorPath() {
-//		// TODO Auto-generated method stub
-//		return PATH;
-//	}
-//	
-//    @RequestMapping(value = PATH)
-//    public String error() {
-//        return "errorHandling";
-//    }
-	
 	@RequestMapping("/")
 	public String indexConnexion(Model model){
-		
-		logController.info("Making sure that we pass by this way index at / LOgger");
-		
+				
 		team = mDAO.findAllMember();
 		proj = pDAO.findAllMember();
 		
@@ -73,11 +59,15 @@ public class ProjectAcc{
 		return "index";
 	}
 	
-	@RequestMapping("/About-Us")
+	@RequestMapping(value="/portfolio")
+	public String getAPortfolio(){
+	
+		return "portfolio";
+	}
+	
+	@RequestMapping("/aboutUs")
 	public String aboutsUs(Model model){
-		
-		logController.info("Making sure that we pass by this way index at / AboutUs");
-		
+				
 		team = mDAO.findAllMember();
 		proj = pDAO.findAllMember();
 

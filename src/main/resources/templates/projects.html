@@ -26,28 +26,29 @@
 <body id="top">
 	<!-- Header -->
 	<header id="header" th:replace="header :: header">
-		<div class="inner">
-			<div class ="avatar image" th:each="member : ${ourTeam}">
-				<a href="#"> 
-					<img src="/images/avatar.jpg" alt="" />
-				</a>
-				<br/>
-				<span th:text="${member.lastName}">name</span>
-				<!-- <br/> -->
-				<!-- <p th:text="${member.role}">role</p> -->
-				<ul class="icons">
-				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-				<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-			</ul>
-			</div>		
-		</div>
+<!-- 		<div class="inner"> -->
+<!-- 			<div class ="avatar image" th:each="member : ${ourTeam}"> -->
+<!-- 				<a href="#">  -->
+<!-- 					<img src="/images/avatar.jpg" alt="" /> -->
+<!-- 				</a> -->
+<!-- 				<br/> -->
+<!-- 				<span th:text="${member.lastName}">name</span> -->
+<!-- 				<br/> -->
+<!-- 				<p th:text="${member.role}">role</p> -->
+<!-- 				<ul class="icons"> -->
+<!-- 				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li> -->
+<!-- 				<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li> -->
+<!-- 			</ul> -->
+<!-- 			</div>		 -->
+<!-- 		</div> -->
 	</header>
 
 	<!-- Main -->
-	<div id="main">
+	<div class="container">
 		
 		<!-- zero -->
-		<section id="zero">
+		<div class="col-xs-12 col-sm-12">
+		<section id="one">
 <!-- 			<header class="major"> -->
 <!-- 				<h2>Return to Poc-Team-Cloud home Page </h2> -->
 <!-- 				<ul><li><a href = "index" th:href="@{/}"> Home </a></li></ul> -->
@@ -76,6 +77,7 @@
 			</div>
 		</section>
 
+	</div>
 	</div>
 
 	<!-- Footer -->

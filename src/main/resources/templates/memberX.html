@@ -24,24 +24,24 @@
 
 	<!-- Header -->
 	<header id="header" th:replace="header :: header" >
-		<div class="inner">
-			<div class ="avatar image" th:each="pj : ${proj}">
-				<a href="#"> 
-					<img src="/images/avatar.jpg" alt="" />
-				</a>
-				<br/>
-				<span th:text="${pj.name}">name</span>
-				<!-- <br/> -->
-				<!-- <p th:text="${member.role}">role</p> -->
-				<ul class="icons">
-				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-			</ul>
-			</div>		
-		</div>
+<!-- 		<div class="inner"> -->
+<!-- 			<div class ="avatar image" th:each="pj : ${proj}"> -->
+<!-- 				<a href="#">  -->
+<!-- 					<img src="/images/avatar.jpg" alt="" /> -->
+<!-- 				</a> -->
+<!-- 				<br/> -->
+<!-- 				<span th:text="${pj.name}">name</span> -->
+<!-- 				<br/> -->
+<!-- 				<p th:text="${member.role}">role</p> -->
+<!-- 				<ul class="icons"> -->
+<!-- 				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li> -->
+<!-- 			</ul> -->
+<!-- 			</div>		 -->
+<!-- 		</div> -->
 	</header>
 
 	<!-- Main -->
-	<div id="main">
+	<div class="container">
 	
 	<!-- Menu -->
 	<!-- <ul id="menu">
@@ -64,6 +64,7 @@
     <li><a href="#">Contact</a></li>
  </ul>  -->
 		<!-- four -->
+		<div class="col-xs-12 col-sm-12">
 		<section id="one">
 		<div >
 			<ul class="actions"><li><a href = "members.html"  th:href="@{/mb}" class="button"> View Members</a></li></ul>	
@@ -94,7 +95,7 @@
 			<ul class="actions"><li><a href = "members" th:href="@{/mb/{id}/u(id=${memb.id})}"  class="button"> Modify</a></li></ul>
 			</div>
 		</section>
-
+	</div>
 	</div>
 	
 	<!-- Footer -->
