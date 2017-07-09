@@ -5,9 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//@Configuration
-//@EnableAutoConfiguration
-//@ComponentScan
 @SpringBootApplication
 public class PtcApplication extends ServletInitializer{
 

@@ -54,7 +54,7 @@ public class ProjectAcc{
 
 		model.addAttribute("ourTeam", lm);
 		model.addAttribute("ourProject", lp);
-		model.addAttribute("jumTitle", "Welcome to Poc-TeamCloud");
+		model.addAttribute("jumTitle", "Welcome to Poc-Team-Cloud [ P.T.C. ]");
 		
 		return "index";
 	}
