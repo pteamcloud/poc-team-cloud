@@ -25,15 +25,15 @@ create the virtual bridge bridge_name without dhcp
 create the virtual bridge bridge_name with dhcp
 
 To create a virtual bridge with DHCP, use the following ml files:
-●	a virtual bridge for development environment: virbr-dev.xml
-●	 a virtual bridge for test environment: virbr-test.xml
-●	a virtual bridge for preproduction environment: virbr-pprd.xml
-●	a virtual bridge for production environment: virbr-prod.xml
+-	a virtual bridge for development environment: virbr-dev.xml
+-	a virtual bridge for test environment: virbr-test.xml
+-	a virtual bridge for preproduction environment: virbr-pprd.xml
+-	a virtual bridge for production environment: virbr-prod.xml
 
 exp: creation of virtual bridge for preproduction environment using virbr-pprd.xml file:
-●	$ virsh net-define /tmp/virbr-pprd.xml (to create the bridge)
-●	$ virsh net-start virbr-pprd (to start the network)
-●	$ virsh net-autostart virbr-pprd (to make the bridge persistent )
+$ virsh net-define /tmp/virbr-pprd.xml (to create the bridge)
+$ virsh net-start virbr-pprd (to start the network)
+$ virsh net-autostart virbr-pprd (to make the bridge persistent )
 
 
 3)	CONFIGURE ETHERNET TO FORWARD TRAFFIC
