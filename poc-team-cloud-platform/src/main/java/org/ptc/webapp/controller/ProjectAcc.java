@@ -1,17 +1,16 @@
-package com.aetsmtl.ptc.servletControllerPocTeamCloud;
+package org.ptc.webapp.controller;
 
 import java.util.List;
 
+import org.ptc.webapp.dto.Member;
+import org.ptc.webapp.dto.Project;
+import org.ptc.webapp.service.impl.MemberDAO;
+import org.ptc.webapp.service.impl.ProjectDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import com.aetsmtl.ptc.beanPocTeamCloud.Member;
-import com.aetsmtl.ptc.beanPocTeamCloud.Project;
-import com.aetsmtl.ptc.modelPocTeamCloud.MemberDAO;
-import com.aetsmtl.ptc.modelPocTeamCloud.ProjectDAO;
 
 
 @Controller

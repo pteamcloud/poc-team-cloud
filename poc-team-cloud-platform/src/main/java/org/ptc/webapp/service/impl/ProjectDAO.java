@@ -1,15 +1,15 @@
-package com.aetsmtl.ptc.modelPocTeamCloud;
+package org.ptc.webapp.service.impl;
 
 import java.util.HashSet;
 import java.util.Set;
 
+import org.ptc.webapp.dto.Member;
+import org.ptc.webapp.dto.Project;
+import org.ptc.webapp.service.ProjectRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import com.aetsmtl.ptc.beanPocTeamCloud.Member;
-import com.aetsmtl.ptc.beanPocTeamCloud.Project;
 
 @Component
 public class ProjectDAO {

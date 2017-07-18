@@ -1,4 +1,4 @@
-package com.aetsmtl.ptc;
+package org.ptc.webapp;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;

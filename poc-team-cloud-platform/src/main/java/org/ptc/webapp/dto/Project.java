@@ -1,4 +1,4 @@
-package com.aetsmtl.ptc.beanPocTeamCloud;
+package org.ptc.webapp.dto;
 
 import java.util.Set;
 

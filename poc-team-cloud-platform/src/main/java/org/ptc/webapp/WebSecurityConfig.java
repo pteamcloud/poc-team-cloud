@@ -1,4 +1,4 @@
-package com.aetsmtl.ptc;
+package org.ptc.webapp;
 
 //import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 //import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;

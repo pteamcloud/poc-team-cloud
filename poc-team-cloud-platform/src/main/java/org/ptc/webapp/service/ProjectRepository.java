@@ -1,8 +1,7 @@
-package com.aetsmtl.ptc.modelPocTeamCloud;
+package org.ptc.webapp.service;
 
+import org.ptc.webapp.dto.Project;
 import org.springframework.data.repository.CrudRepository;
-
-import com.aetsmtl.ptc.beanPocTeamCloud.Project;
 
 public interface ProjectRepository extends CrudRepository<Project, Long> {
 	
