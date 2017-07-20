@@ -3,7 +3,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<title>FINANCE MANAGEMENT - poc-team-Cloud</title>
+<title>Finance management - poc-team-Cloud</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -35,60 +35,65 @@
 
 	<!-- Main -->
 	<div class="container">
-
 		<div class="row">
-			<div class="col-xs-12 col-sm-6 col-md-8">
-				<h3>OPERATIONS</h3>
-				<h1>.</h1>
-				<div class="table-responsive">
-					<table class="table table-bordered">
+			<div class="col-xs-6 col-md-12">
+				<h3>Recapitulatif</h3>
+				<table class="table table-responsive table-bordered"
+					th:each="item : ${ptcFinSolde}">
+					<tr>
+						<td>
+							<div>
+								<p></p>
+								<h5>Currently solde</h5>
+
+
+								<div class="page-header">
+
+									<h1 th:text="${item.solde} + ' €'">
+										 <small>An intuitive front-end framework</small>
+									</h1>
+								</div>
+								
+							</div>
+							<div>
+								<h3>Last operation</h3>
+								<p th:text="${item.op.name}"></p>
+								<p th:text="${item.op.amount} + ' €'"></p>
+								<p th:text="${item.op.date}"></p>
+								<p th:text="${item.op.description}"></p>
+								<p></p>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-12">
+				<h3>Operations</h3>
+
+				<table class="table table-responsive table-bordered table-striped">
+					<thead class="thead-inverse">
 						<tr>
 							<th>Owner</th>
 							<th>Description</th>
 							<th>Amount</th>
 							<th>Date</th>
 						</tr>
+					</thead>
+					<tbody>
 						<tr th:each="item : ${ptcFinOps}">
 							<td th:text="${item.name}">Jill</td>
 							<td th:text="${item.description}">Smith</td>
 							<td th:text="${item.amount} + ' €'">50</td>
 							<td th:text="${item.date}">50</td>
 						</tr>
-					</table>
-				</div>
-				<h1>.</h1>
+					</tbody>
+
+				</table>
 			</div>
-			<div class="col-xs-6 col-md-4">
-				<h3>SOLDE</h3>
-				<h1>.</h1>
-				<div class="table-responsive">
-					<table class="table table-bordered" th:each="item : ${ptcFinSolde}">
-						<tr>
-							<td>
-								<div>
-									<p></p>
-									<h3>Currently Solde</h3>
-									<h1 th:text="${item.solde} + ' €'"></h1>
-								</div>
-								<div>
-									<h3>last Operation</h3>
-									<p th:text="${item.op.name}"></p>
-									<p th:text="${item.op.amount}"></p>
-									<p th:text="${item.op.date}"></p>
-									<p th:text="${item.op.description}"></p>
-									<p></p>
-								</div>
 
-
-							</td>
-						</tr>
-					</table>
-				</div>
-
-				<h1>.</h1>
-			</div>
 		</div>
-
 	</div>
 
 	<!-- Footer -->

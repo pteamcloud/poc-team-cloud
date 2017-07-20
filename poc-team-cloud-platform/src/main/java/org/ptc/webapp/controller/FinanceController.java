@@ -28,7 +28,7 @@ public class FinanceController {
 		
 		double solde = lOperation.stream().filter(o -> Double.valueOf(o.getAmount()) != null)
 				.mapToDouble(o -> o.getAmount()).sum();
-		Date rdate = lOperation.stream().map(o -> o.getDate()).min(Date::compareTo).get();
+		Date rdate = lOperation.stream().map(o -> o.getDate()).max(Date::compareTo).get();
 		Operation lastOperation = lOperation.stream()
 				// .peek(num -> System.out.println("will filter " + num))
 				.filter(o -> o.getDate().equals(rdate)).findFirst().get();

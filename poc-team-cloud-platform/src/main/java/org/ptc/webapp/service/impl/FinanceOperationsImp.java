@@ -38,7 +38,7 @@ public class FinanceOperationsImp implements FinanceOperations {
 
 		List<Operation> allListOperations = new ArrayList<>();
 		Path path = null;
-		Path p = null;
+
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
 
 		try {
