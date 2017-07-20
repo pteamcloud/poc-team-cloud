@@ -38,11 +38,12 @@ public class FinanceOperationsImp implements FinanceOperations {
 
 		List<Operation> allListOperations = new ArrayList<>();
 		Path path = null;
+		Path p = null;
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
 
 		try {
-
-			path = Paths.get(getClass().getClassLoader().getResource("finances/Read-Only-PTC.finance").toURI());
+			path = Paths.get(System.getenv("FINANCE"), "Read-Only-PTC.finance");
+			
 			Stream<String> lines = Files.lines(path);
 			lines.forEach(line -> {
 				Operation op = new Operation();
@@ -61,7 +62,7 @@ public class FinanceOperationsImp implements FinanceOperations {
 			});
 			lines.close();
 
-		} catch (URISyntaxException | IOException e) {
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
