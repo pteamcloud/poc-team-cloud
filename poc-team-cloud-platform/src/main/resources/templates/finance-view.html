@@ -36,7 +36,7 @@
 	<!-- Main -->
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-6 col-md-12">
+			<div class="col-xs-12 col-md-12">
 				<h3>Recapitulatif</h3>
 				<table class="table table-responsive table-bordered"
 					th:each="item : ${ptcFinSolde}">
@@ -50,10 +50,10 @@
 								<div class="page-header">
 
 									<h1 th:text="${item.solde} + ' €'">
-										 <small>An intuitive front-end framework</small>
+										<small>An intuitive front-end framework</small>
 									</h1>
 								</div>
-								
+
 							</div>
 							<div>
 								<h3>Last operation</h3>
@@ -69,7 +69,17 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-12 col-sm-6 col-md-12">
+			<div class="col-xs-12 col-sm-6 col-md-2">
+				<h3>Comptes</h3>
+				<ul class="list-group">
+					<li class="list-group-item">Contributors</li>
+					<li class="list-group-item">Téléchargement</li>
+					<li class="list-group-item">Consultation</li>
+					<li class="list-group-item">Dépenses et revenus</li>
+					<li class="list-group-item">Situation</li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-8">
 				<h3>Operations</h3>
 
 				<table class="table table-responsive table-bordered table-striped">
@@ -92,7 +102,38 @@
 
 				</table>
 			</div>
+			<div class="col-xs-12 col-sm-6 col-md-2">
+				<h3>Pub</h3>
 
+				<table class="table table-responsive table-bordered table-striped">
+					<tbody>
+						<tr>
+							<td>
+								<h1>PUB 1</h1>
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h1>PUB 2</h1>
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h1>PUB 3</h1>
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+		<div class="border row align-items-end ">
+			<div class="col col-xs-12 col-sm-6 col-md-2">ddddddddddddddOne of three columns</div>
+			<div class="col col-xs-12 col-sm-6 col-md-8">One of three columns</div>
+			<div class="col col-xs-12 col-sm-6 col-md-2">One of three columns</div>
 		</div>
 	</div>
 
