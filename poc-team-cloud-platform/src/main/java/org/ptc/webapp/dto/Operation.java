@@ -14,8 +14,9 @@ public class Operation {
 	private Long id;
 	private String name;
 	private String description;
-	private Date date;
 	private double amount;
+	private Date date;
+	
 	
 	public String getName() {
 		return name;

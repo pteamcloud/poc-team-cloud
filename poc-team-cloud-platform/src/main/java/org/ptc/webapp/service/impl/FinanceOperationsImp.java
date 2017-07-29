@@ -49,14 +49,14 @@ public class FinanceOperationsImp implements FinanceOperations {
 				Operation op = new Operation();
 				String[] entries = line.split(";");
 				op.setName(entries[1]);
+				op.setAmount(Double.parseDouble(entries[2]));
+				op.setDescription(entries[3]);
 				try {
 					op.setDate(formatter.parse(entries[4]));
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				op.setDescription(entries[3]);
-				op.setAmount(Double.parseDouble(entries[2]));
 
 				allListOperations.add(op);
 			});
