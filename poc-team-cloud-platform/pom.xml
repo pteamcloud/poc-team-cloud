@@ -10,6 +10,7 @@
 
 	<artifactId>poc-team-cloud-webapp</artifactId>
 	<name>Poc-team-cloud WebApp</name>
+	<packaging>war</packaging>
 	<description>Poc-team-cloud WebApp</description>
 	<url>http://maven.apache.org</url>
 	<dependencies>
@@ -17,12 +18,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<!-- <exclusions> -->
-			<!-- <exclusion> -->
-			<!-- <groupId>org.springframework.boot</groupId> -->
-			<!-- <artifactId>spring-boot-starter-tomcat</artifactId> -->
-			<!-- </exclusion> -->
-			<!-- </exclusions> -->
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<dependency>
@@ -43,11 +44,11 @@
 		</dependency>
 
 
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.h2database</groupId> -->
-<!-- 			<artifactId>h2</artifactId> -->
-<!-- 			<scope>runtime</scope> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.h2database</groupId> -->
+		<!-- <artifactId>h2</artifactId> -->
+		<!-- <scope>runtime</scope> -->
+		<!-- </dependency> -->
 
 
 		<dependency>
@@ -77,10 +78,16 @@
 			<artifactId>javax.servlet-api</artifactId>
 		</dependency>
 
-	<dependency>
-		<groupId>mysql</groupId>
-		<artifactId>mysql-connector-java</artifactId>
-	</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.wildfly.plugins</groupId>
+			<artifactId>wildfly-maven-plugin</artifactId>
+			<version>1.2.0.Final</version>
+		</dependency>
 
 	</dependencies>
 
@@ -93,20 +100,47 @@
 			<plugin>
 				<groupId>org.wildfly.plugins</groupId>
 				<artifactId>wildfly-maven-plugin</artifactId>
-				<version>1.1.0.Alpha5</version>
+				<version>1.2.0.Final</version>
 				<configuration>
-					<hostname>192.168.1.13</hostname>
+					<hostname>10.10.1.2</hostname>
 					<port>9990</port>
-					<username>Wildfly</username>
-					<password>Wildfly</password>
-					<name>ptc.war</name>
+					<username>admin</username>
+					<password>toor2devWildfly@</password>
+					<name>${project.build.finalName}.${project.packaging}</name>
 				</configuration>
+				<executions>
+					<!-- Undeploy the application on clean -->
+					<execution>
+						<id>undeploy</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>undeploy</goal>
+						</goals>
+						<configuration>
+							<ignoreMissingDeployment>true</ignoreMissingDeployment>
+						</configuration>
+					</execution>
+
+					<!-- Deploy the application on install -->
+					<execution>
+						<id>deploy</id>
+						<phase>install</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>org.ptc.webapp.PtcApplication</mainClass>
+<!-- 					<layout>ZIP</layout> -->
+				</configuration>
 				<executions>
+
 					<execution>
 						<goals>
 							<goal>repackage</goal>
