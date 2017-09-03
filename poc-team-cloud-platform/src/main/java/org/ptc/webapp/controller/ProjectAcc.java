@@ -64,6 +64,18 @@ public class ProjectAcc{
 		return "portfolio";
 	}
 	
+	@RequestMapping(value="/login")
+	public String login(){
+	
+		return "login";
+	}
+	
+	@RequestMapping("/login-error")
+	public String loginError(Model model) {
+		model.addAttribute("loginError", true);
+		return "login";
+	}
+	
 	@RequestMapping("/aboutUs")
 	public String aboutsUs(Model model){
 				
