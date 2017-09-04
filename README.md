@@ -1,4 +1,4 @@
-******************************
+*****************************
 * DESCRIPTION 
 ******************************
 # poc-team-cloud
@@ -10,7 +10,6 @@
 @Aetsmtl
 @Kisvish
 @knaymar
-
 
 **********************************
 * How to run it from your terminal
