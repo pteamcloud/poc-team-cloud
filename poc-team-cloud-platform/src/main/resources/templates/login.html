@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8"></meta>
-<title>Welcome To PTC</title>
+<title>SIGN IN</title>
 
 
 
@@ -32,18 +32,18 @@ body {
 	width: auto;
 	height: auto;
 	background-image:
-		url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
+		url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008-940x450.jpg);
 	background-size: cover;
-	-webkit-filter: blur(5px);
+/*	-webkit-filter: blur(5px);*/
 	z-index: 0;
 }
 
 .grad {
 	position: absolute;
-	top: -20px;
-	left: -20px;
-	right: -40px;
-	bottom: -40px;
+	top: -5px;
+	left: -5px;
+	right: 0px;
+	bottom: 0px;
 	width: auto;
 	height: auto;
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(100
@@ -55,14 +55,19 @@ body {
 
 .header {
 	position: absolute;
-	top: calc(38% - 35px);
-	left: calc(61% - 255px);
+	top: calc(10% - 35px);
+	left: calc(71% - 255px);
 	z-index: 2;
+	font-family: 'Exo', sans-serif;
+	font-size: 35px;
+	font-weight: 200;
+	color: #fff;
+	
 }
 
 .header div {
-	float: left;
-	color: #fff;
+	/*float: left;*/
+	/**/
 	font-family: 'Exo', sans-serif;
 	font-size: 35px;
 	font-weight: 200;
@@ -72,6 +77,11 @@ body {
 	color: !important;
 }
 
+.title{
+font-family: 'Exo', sans-serif;
+	font-size: 20px;
+	font-weight: 200;
+}
 .login {
 	position: absolute;
 	top: calc(50% - 75px);
@@ -162,21 +172,21 @@ body {
 
 <body>
 
-	<div >
+	<div class="body">
 		<div class="grad">
 
-			<div class="login">
+			<div class="login" >
 
 				<p th:if="${loginError}" class="error">Wrong user or password</p>
 				<form th:action="@{/login}" method="post">
-
-					<label for="Enter username :)">Username </label> <br></br> <br></br> <input
-						type="text" placeholder="Enter your ptc username :)" name="username"
-						id="username" autofocus="autofocus"></input><br></br> <br></br> <label
-						for="Enter password">Password </label> <br></br> <input
-						type="password" id="password" placeholder="and your password /!\"
-						name="password"></input><br></br> <br></br> <input name="submit"
-						type="submit" value="Login"></input> <br></br>
+					
+					<label for="password" class="header">TeamCloud</label> <br></br> <br></br> 
+					<label for="Title" class="title">SIGN IN </label> <br></br> <br></br> <input
+						type="text" placeholder="username" name="username"
+						id="username" autofocus="autofocus"></input><br></br> <br></br> 
+						<input type="password" id="password" placeholder="password"
+						name="password"></input><br></br> 
+						<input  type="button" value="Login"></input>
 				</form>
 				<p>
 					<a href="/index" th:href="@{/}">Back to home page</a>
