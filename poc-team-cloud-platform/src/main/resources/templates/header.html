@@ -93,15 +93,12 @@
 								<li><a href="members" th:href="@{/mb}"><span
 										class="glyphicon glyphicon-list-alt"></span>View Member </a></li>
 							</ul></li>
-						<li><a class="dropdown" href="#contact">About <span
-								class="caret"></span></a></li>
-						<li><a class="dropdown-toggle" data-toggle="dropdown"
+						<li><a href="#contact">About </a></li>
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"
 							href="#">Log <span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><span class="glyphicon glyphicon-log-in"></span>
-								<form th:action="@{/logout}" method="post">
-										<input type="submit" value="Log out" />
-									</form></li>
+								<li><a href="login" th:action="@{/login}" ><span class="glyphicon glyphicon-log-in"></span>Log in</a></li>
+									<li><a href="login" th:action="@{/logout}" ><span class="glyphicon glyphicon-log-out"></span>Log out</a></li>
 							</ul></li>
 
 					</ul>
