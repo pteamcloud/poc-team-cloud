@@ -108,28 +108,24 @@
 				<executions>
 				
 					<!-- Undeploy the application on clean -->
-<!-- 					<execution> -->
-<!-- 						<id>undeploy</id> -->
-<!-- 						<phase>clean</phase> -->
-<!-- 						<goals> -->
-<!-- 							<goal>undeploy</goal> -->
-<!-- 						</goals> -->
-<!-- 						<configuration> -->
-<!-- 							<ignoreMissingDeployment>true</ignoreMissingDeployment> -->
-<!-- 						</configuration> -->
-<!-- 					</execution> -->
+					<execution>
+						<id>undeploy</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>undeploy</goal>
+						</goals>
+						<configuration>
+							<ignoreMissingDeployment>true</ignoreMissingDeployment>
+						</configuration>
+					</execution>
 
 					<!-- Deploy the application on install -->
 					<execution>
 						<id>deploy</id>
 						<phase>install</phase>
 						<goals>
-							<goal>undeploy</goal>
 							<goal>deploy</goal>
 						</goals>
-						<configuration>
-							<ignoreMissingDeployment>true</ignoreMissingDeployment>
-						</configuration>
 					</execution>
 					
 				</executions>
