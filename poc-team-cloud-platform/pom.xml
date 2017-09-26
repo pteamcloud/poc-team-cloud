@@ -10,7 +10,7 @@
 
 	<artifactId>poc-team-cloud-webapp</artifactId>
 	<name>Poc-team-cloud WebApp</name>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<description>Poc-team-cloud WebApp</description>
 	<url>http://maven.apache.org</url>
 	<dependencies>
@@ -18,12 +18,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-<!-- 			<exclusions> -->
-<!-- 				<exclusion> -->
-<!-- 					<groupId>org.springframework.boot</groupId> -->
-<!-- 					<artifactId>spring-boot-starter-tomcat</artifactId> -->
-<!-- 				</exclusion> -->
-<!-- 			</exclusions> -->
 		</dependency>
 
 		<dependency>
@@ -89,11 +83,9 @@
 	</dependencies>
 
 	<build>
-
-		<finalName>pocTeamCloud</finalName>
-
+		<finalName>poc-team-cloud-platform</finalName>
 		<plugins>
-
+			
 			<plugin>
 				<groupId>org.wildfly.plugins</groupId>
 				<artifactId>wildfly-maven-plugin</artifactId>
@@ -106,7 +98,7 @@
 					<name>${project.build.finalName}.${project.packaging}</name>
 				</configuration>
 				<executions>
-				
+
 					<!-- Undeploy the application on clean -->
 					<execution>
 						<id>undeploy</id>
@@ -127,7 +119,7 @@
 							<goal>deploy</goal>
 						</goals>
 					</execution>
-					
+
 				</executions>
 			</plugin>
 
