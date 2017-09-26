@@ -1,6 +1,5 @@
-package org.ptc;
+package org.ptc.platform;
 
-import org.ptc.webapp.ServletInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;

@@ -1,6 +1,5 @@
-package org.ptc.webapp;
+package org.ptc.platform;
 
-import org.ptc.PtcApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 

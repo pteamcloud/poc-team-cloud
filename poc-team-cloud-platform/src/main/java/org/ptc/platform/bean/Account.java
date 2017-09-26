@@ -1,4 +1,4 @@
-package org.ptc.webapp.dto;
+package org.ptc.platform.bean;
 
 public class Account {
 

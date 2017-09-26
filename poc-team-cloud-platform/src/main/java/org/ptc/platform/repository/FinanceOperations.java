@@ -1,7 +1,8 @@
-package org.ptc.webapp.service;
+package org.ptc.platform.repository;
 
 import java.util.List;
-import org.ptc.webapp.dto.Operation;
+
+import org.ptc.platform.bean.Operation;
 
 public interface FinanceOperations {
 

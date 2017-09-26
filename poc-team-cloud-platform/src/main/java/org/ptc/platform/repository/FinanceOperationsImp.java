@@ -1,4 +1,4 @@
-package org.ptc.webapp.service.impl;
+package org.ptc.platform.repository;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -10,8 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-import org.ptc.webapp.dto.Operation;
-import org.ptc.webapp.service.FinanceOperations;
+import org.ptc.platform.bean.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

@@ -1,10 +1,10 @@
-package org.ptc.webapp.controller;
+package org.ptc.platform.controller;
 
 import javax.validation.Valid;
 
-import org.ptc.webapp.dto.Project;
-import org.ptc.webapp.service.impl.MemberDAO;
-import org.ptc.webapp.service.impl.ProjectDAO;
+import org.ptc.platform.bean.Project;
+import org.ptc.platform.repository.MemberDAO;
+import org.ptc.platform.repository.ProjectDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

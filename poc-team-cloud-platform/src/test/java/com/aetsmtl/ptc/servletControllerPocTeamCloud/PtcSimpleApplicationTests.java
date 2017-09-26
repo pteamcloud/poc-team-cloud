@@ -2,7 +2,7 @@ package com.aetsmtl.ptc.servletControllerPocTeamCloud;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.ptc.PtcApplication;
+import org.ptc.platform.PtcApplication;
 //import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 

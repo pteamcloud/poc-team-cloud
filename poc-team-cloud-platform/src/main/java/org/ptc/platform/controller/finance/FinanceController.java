@@ -1,12 +1,12 @@
-package org.ptc.webapp.controller;
+package org.ptc.platform.controller.finance;
 
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
-import org.ptc.webapp.dto.Account;
-import org.ptc.webapp.dto.Operation;
-import org.ptc.webapp.service.FinanceOperations;
+import org.ptc.platform.bean.Account;
+import org.ptc.platform.bean.Operation;
+import org.ptc.platform.repository.FinanceOperations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

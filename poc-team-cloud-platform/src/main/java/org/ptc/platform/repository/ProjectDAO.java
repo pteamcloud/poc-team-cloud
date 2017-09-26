@@ -1,11 +1,10 @@
-package org.ptc.webapp.service.impl;
+package org.ptc.platform.repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import org.ptc.webapp.dto.Member;
-import org.ptc.webapp.dto.Project;
-import org.ptc.webapp.service.ProjectRepository;
+import org.ptc.platform.bean.Member;
+import org.ptc.platform.bean.Project;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
