@@ -10,8 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.PreUpdate;
 
-import org.hibernate.annotations.NaturalId;
-
 @Entity(name="contribution")
 public class Contribution implements Serializable {
 

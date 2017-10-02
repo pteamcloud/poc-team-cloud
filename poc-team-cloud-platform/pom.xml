@@ -18,12 +18,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-<!-- 			<exclusions> -->
-<!-- 				<exclusion> -->
-<!-- 					<groupId>org.springframework.boot</groupId> -->
-<!-- 					<artifactId>spring-boot-starter-tomcat</artifactId> -->
-<!-- 				</exclusion> -->
-<!-- 			</exclusions> -->
+			<!-- <exclusions> -->
+			<!-- <exclusion> -->
+			<!-- <groupId>org.springframework.boot</groupId> -->
+			<!-- <artifactId>spring-boot-starter-tomcat</artifactId> -->
+			<!-- </exclusion> -->
+			<!-- </exclusions> -->
 		</dependency>
 
 		<dependency>
@@ -88,49 +88,59 @@
 
 	</dependencies>
 
-	<build>
-
-		<finalName>pocTeamCloud</finalName>
-
-		<plugins>
-
-			<plugin>
-				<groupId>org.wildfly.plugins</groupId>
-				<artifactId>wildfly-maven-plugin</artifactId>
-				<version>1.2.0.Final</version>
-				<configuration>
-					<hostname>10.10.1.2</hostname>
-					<port>9990</port>
-					<username>admin</username>
-					<password>toor2devWildfly@</password>
-					<name>${project.build.finalName}.${project.packaging}</name>
-				</configuration>
-				<executions>
-				
-					<!-- Undeploy the application on clean -->
-					<execution>
-						<id>undeploy</id>
-						<phase>clean</phase>
-						<goals>
-							<goal>undeploy</goal>
-						</goals>
+	<profiles>
+		<profile>
+			<id>default</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>fullDeploy</id>
+			<build>
+				<finalName>pocTeamCloud</finalName>
+				<plugins>
+					<plugin>
+						<groupId>org.wildfly.plugins</groupId>
+						<artifactId>wildfly-maven-plugin</artifactId>
+						<version>1.2.0.Final</version>
 						<configuration>
-							<ignoreMissingDeployment>true</ignoreMissingDeployment>
+							<hostname>10.10.1.2</hostname>
+							<port>9990</port>
+							<username>admin</username>
+							<password>toor2devWildfly@</password>
+							<name>${project.build.finalName}.${project.packaging}</name>
 						</configuration>
-					</execution>
+						<executions>
+							<!-- Undeploy the application on clean -->
+							<execution>
+								<id>undeploy</id>
+								<phase>clean</phase>
+								<goals>
+									<goal>undeploy</goal>
+								</goals>
+								<configuration>
+									<ignoreMissingDeployment>true</ignoreMissingDeployment>
+								</configuration>
+							</execution>
+							<!-- Deploy the application on install -->
+							<execution>
+								<id>deploy</id>
+								<phase>install</phase>
+								<goals>
+									<goal>deploy</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
-					<!-- Deploy the application on install -->
-					<execution>
-						<id>deploy</id>
-						<phase>install</phase>
-						<goals>
-							<goal>deploy</goal>
-						</goals>
-					</execution>
-					
-				</executions>
-			</plugin>
-
+	<build>
+		<finalName>pocTeamCloud</finalName>
+		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -139,7 +149,6 @@
 					<!-- <layout>ZIP</layout> -->
 				</configuration>
 				<executions>
-
 					<execution>
 						<goals>
 							<goal>repackage</goal>
@@ -147,8 +156,6 @@
 					</execution>
 				</executions>
 			</plugin>
-
 		</plugins>
 	</build>
-
 </project>

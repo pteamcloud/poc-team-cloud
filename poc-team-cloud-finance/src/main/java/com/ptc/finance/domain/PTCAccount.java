@@ -6,7 +6,6 @@ public class PTCAccount {
 
 	private List <Contribution> aLContribution ;
 	private double solde ;
-	private boolean status ;
 	
 	public List<Contribution> getALContribution() {
 		return aLContribution;
@@ -21,6 +20,6 @@ public class PTCAccount {
 	
 	public boolean getStatus() {
 		
-		return solde >  0 ? (status = true) : (status = false) ;
+		return solde >  0 ? true :  false ;
 	}
 }

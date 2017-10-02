@@ -1,7 +1,6 @@
 package org.ptc.platform.repository;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import org.ptc.platform.bean.Member;
