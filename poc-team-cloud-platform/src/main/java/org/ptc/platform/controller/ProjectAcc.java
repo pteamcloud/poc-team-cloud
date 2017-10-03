@@ -2,8 +2,8 @@ package org.ptc.platform.controller;
 
 import java.util.List;
 
-import org.ptc.platform.bean.Member;
-import org.ptc.platform.bean.Project;
+import org.ptc.api.user.dto.Member;
+import org.ptc.api.user.dto.Project;
 import org.ptc.platform.repository.MemberDAO;
 import org.ptc.platform.repository.ProjectDAO;
 import org.springframework.beans.factory.annotation.Autowired;

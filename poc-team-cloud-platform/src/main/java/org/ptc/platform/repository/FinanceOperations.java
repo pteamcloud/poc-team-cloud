@@ -1,10 +1,14 @@
 package org.ptc.platform.repository;
 
-import java.util.List;
+import java.util.Set;
 
-import org.ptc.platform.bean.Operation;
+import org.ptc.api.finance.dto.PtcTransaction;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface FinanceOperations {
-
-	List<Operation> findAllOfOperations();
+@Repository
+public interface FinanceOperations extends CrudRepository<PtcTransaction, Long> {
+	
+	Set<PtcTransaction> findAll();
+	
 }

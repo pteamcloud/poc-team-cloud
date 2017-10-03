@@ -1,0 +1,45 @@
+#Common properties
+
+# Allow Thymeleaf templates to be reloaded at dev time
+spring:
+  profiles:
+    active: test
+    
+server:
+  tomcat:
+    access_log_enabled: true
+  port: 8099
+
+
+---
+spring:
+  profiles: test
+
+
+---
+spring:
+  profiles: cible
+  main:
+    web-environment: false
+  datasource:
+    url: jdbc:mysql://10.10.1.5:13306/BDFinance?useSSL=false
+    username: ptcNikeDB
+    password: P0kl@vers!NikeDB
+
+
+server:
+  port: 18871
+
+
+---
+spring:
+  profiles: prod
+  main:
+    web-environment: false
+  datasource:
+    url: jdbc:mysql://10.10.1.5:13306/BDFinance?useSSL=false
+    username: ptcNikeDB
+    password: P0kl@vers!NikeDB
+    # Keep the connection alive if idle for a long time (needed in production)
+    testWhileIdle: true
+    validationQuery: SELECT 1

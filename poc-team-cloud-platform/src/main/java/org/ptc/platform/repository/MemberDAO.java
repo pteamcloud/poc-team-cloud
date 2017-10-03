@@ -3,8 +3,8 @@ package org.ptc.platform.repository;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.ptc.platform.bean.Member;
-import org.ptc.platform.bean.Project;
+import org.ptc.api.user.dto.Member;
+import org.ptc.api.user.dto.Project;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

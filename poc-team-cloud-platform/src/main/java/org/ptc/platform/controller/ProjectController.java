@@ -2,7 +2,7 @@ package org.ptc.platform.controller;
 
 import javax.validation.Valid;
 
-import org.ptc.platform.bean.Project;
+import org.ptc.api.user.dto.Project;
 import org.ptc.platform.repository.MemberDAO;
 import org.ptc.platform.repository.ProjectDAO;
 import org.springframework.beans.factory.annotation.Autowired;
