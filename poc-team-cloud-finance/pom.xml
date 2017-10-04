@@ -9,12 +9,25 @@
 	</parent>
 
 
+	<packaging>pom</packaging>
 	<artifactId>poc-team-cloud-finance</artifactId>
 	<name>poc-team-cloud Finance</name>
 	<description>Poc-team-cloud Finance</description>
+
 	<url>http://maven.apache.org</url>
-	
-	<packaging>pom</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+		</dependency>
+	</dependencies>
 
 	<modules>
 		<module>ptc-finance-api</module>
