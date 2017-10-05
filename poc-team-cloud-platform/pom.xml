@@ -28,6 +28,12 @@
 		</dependency>
 		
 		<dependency>
+		    <groupId>org.ptc.platform</groupId>
+		    <artifactId>ptc-project-api</artifactId>
+		    <version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-web</artifactId>
 	<!-- <exclusions> -->
@@ -38,6 +44,18 @@
 	<!-- </exclusions> -->
 </dependency>
 
+		<dependency>
+			<groupId>org.ptc.platform</groupId>
+			<artifactId>ptc-project-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.ptc.platform</groupId>
+			<artifactId>ptc-user-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>

@@ -1,7 +1,7 @@
-package org.ptc.rest.user.user.controller;
+package org.ptc.rest.user.controller;
 
-import org.ptc.rest.user.user.entity.PtcUser;
-import org.ptc.rest.user.user.repository.UserRepository;
+import org.ptc.rest.user.entity.PtcUser;
+import org.ptc.rest.user.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

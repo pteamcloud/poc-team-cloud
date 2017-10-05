@@ -1,7 +1,7 @@
-package org.ptc.rest.finance.finance.controller;
+package org.ptc.rest.finance.controller;
 
-import org.ptc.rest.finance.finance.entity.PtcTransaction;
-import org.ptc.rest.finance.finance.repository.FinanceRepository;
+import org.ptc.rest.finance.entity.PtcTransaction;
+import org.ptc.rest.finance.repository.FinanceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("finance")
-public class financeController {
+public class FinanceController {
 
 	@Autowired
 	FinanceRepository financeRepositoy;

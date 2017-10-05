@@ -1,4 +1,4 @@
-package org.ptc.rest.project.finance.entity;
+package org.ptc.rest.project.entity;
 
 import java.util.Set;
 

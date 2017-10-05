@@ -1,6 +1,6 @@
-package org.ptc.rest.finance.finance.repository;
+package org.ptc.rest.finance.repository;
 
-import org.ptc.rest.finance.finance.entity.PtcTransaction;
+import org.ptc.rest.finance.entity.PtcTransaction;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
