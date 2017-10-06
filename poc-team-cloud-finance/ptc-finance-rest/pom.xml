@@ -72,7 +72,7 @@
         <profile>
             <id>fullDeploy</id>
             <build>
-                <finalName>pocteamcloud</finalName>
+                <finalName>finance-api</finalName>
                 <plugins>
                     <plugin>
                         <groupId>org.wildfly.plugins</groupId>
@@ -113,7 +113,7 @@
     </profiles>
 
     <build>
-        <finalName>pocteamcloud</finalName>
+        <finalName>finance-api</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
