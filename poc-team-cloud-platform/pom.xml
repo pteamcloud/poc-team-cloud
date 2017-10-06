@@ -90,15 +90,15 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
+<!--         <dependency> -->
+<!--             <groupId>org.springframework.boot</groupId> -->
+<!--             <artifactId>spring-boot-starter-security</artifactId> -->
+<!--         </dependency> -->
 
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-config</artifactId>
-        </dependency>
+<!--         <dependency> -->
+<!--             <groupId>org.springframework.security</groupId> -->
+<!--             <artifactId>spring-security-config</artifactId> -->
+<!--         </dependency> -->
 
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -119,16 +119,18 @@
     </dependencies>
 
     <profiles>
+        
         <profile>
             <id>default</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
         </profile>
+        
         <profile>
             <id>fullDeploy</id>
             <build>
-                <finalName>poc-team-cloud</finalName>
+                <finalName>pocteamcloud</finalName>
                 <plugins>
                     <plugin>
                         <groupId>org.wildfly.plugins</groupId>
@@ -169,13 +171,13 @@
     </profiles>
 
     <build>
-        <finalName>pocTeamCloud</finalName>
+        <finalName>pocteamcloud</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>org.ptc.PtcApplication</mainClass>
+                    <mainClass>org.ptc.platform.PtcWebApplication</mainClass>
                     <!-- <layout>ZIP</layout> -->
                 </configuration>
                 <executions>
@@ -188,4 +190,5 @@
             </plugin>
         </plugins>
     </build>
+    
 </project>

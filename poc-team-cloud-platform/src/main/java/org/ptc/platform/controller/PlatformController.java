@@ -1,8 +1,5 @@
 package org.ptc.platform.controller;
 
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.ptc.api.finance.dto.PtcTransaction;
@@ -12,8 +9,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.MediaType;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,7 +23,7 @@ public class PlatformController {
 	// Using default configuration
 	private static final RestTemplate REST_TEMPLATE = new RestTemplate();
 
-	@RequestMapping("/")
+	@RequestMapping("/accueil")
 	public String welcome(Model model) {
 
 		LOGGER.info(" === > Requesting PlatformController controller at root endpoint <===");
