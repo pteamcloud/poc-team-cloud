@@ -14,12 +14,6 @@
 	<name>ptc-project-api</name>
 
 	<dependencies>
-		
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-		</dependency>
-
 	</dependencies>
 
 </project>

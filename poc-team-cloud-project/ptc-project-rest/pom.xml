@@ -12,6 +12,7 @@
 
     <artifactId>ptc-project-rest</artifactId>
     <name>ptc-project-rest</name>
+    <packaging>war</packaging>    
 
     <url>http://maven.apache.org</url>
     <organization>

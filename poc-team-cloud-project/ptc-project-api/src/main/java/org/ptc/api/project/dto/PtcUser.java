@@ -2,19 +2,11 @@ package org.ptc.api.project.dto;
 
 import java.util.Set;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-
-import org.ptc.api.project.dto.PtcProject;
-
-@Entity
+//@Entity
 public class PtcUser {
 	
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	//@Id
+	//@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	private String surName;
 	private String firstName;
@@ -23,7 +15,7 @@ public class PtcUser {
 	private String linkedinUrlRef;
 	private String githubUrlRef;
 	
-	@ManyToMany(mappedBy="contributors")
+	//@ManyToMany(mappedBy="contributors")
 	private Set<PtcProject> proj_Member;
 	
 	public Long getId() {

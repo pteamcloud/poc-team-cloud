@@ -12,6 +12,9 @@
     <artifactId>ptc-user-rest</artifactId>
     <name>ptc-user-rest</name>
     <url>http://maven.apache.org</url>
+    
+    <packaging>war</packaging>
+        
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

@@ -8,6 +8,7 @@
 		<artifactId>poc-team-cloud-user</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+    
 	<artifactId>ptc-user-api</artifactId>
 
 	<name>ptc-user-api</name>

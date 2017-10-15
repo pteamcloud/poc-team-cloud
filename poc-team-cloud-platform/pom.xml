@@ -11,8 +11,10 @@
     <artifactId>poc-team-cloud-webapp</artifactId>
     <name>poc-team-cloud WebApp</name>
     <packaging>war</packaging>
+    
     <description>poc-team-cloud WebApp</description>
     <url>http://maven.apache.org</url>
+    
     <dependencies>
 
         <dependency>
