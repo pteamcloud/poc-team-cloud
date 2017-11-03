@@ -1,6 +1,7 @@
 #!/bin/bash
 
-read pass
+echo "Enter the default password:"
+read -s pass
 
 while IFS=':' read ip name; do
         echo "Creating $name account"
