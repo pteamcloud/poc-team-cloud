@@ -9,3 +9,5 @@ read -s pass_root
 while IFS='-' read ip name; do
         nohup sshpass -p $pass_root ssh root@$ip useradd $name -m -p `openssl passwd $pass` & > user_creation.log >> /dev/null
 done < users.txt
+
+# https://www.digitalocean.com/community/tutorials/how-to-set-up-a-basic-iptables-firewall-on-centos-6
