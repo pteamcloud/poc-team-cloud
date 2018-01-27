@@ -45,7 +45,9 @@ spring:
 server:
   port: ${SERVER_APP_PORT}
   
-  
+logging:
+  path: ${HOME}
+
 ---
 spring:
   profiles: prod

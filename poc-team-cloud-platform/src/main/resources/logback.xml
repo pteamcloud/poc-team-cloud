@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%-30(%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread]) [%level] %logger{32} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="SAVE-TO-FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_PATH}/log.log</file>
+		
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>%-30(%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread]) [%level] %logger{32} - %msg%n</Pattern>
+		</encoder>
+		
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern> ${LOG_PATH}/archived/log_%d{dd-MM-yyyy}.log
+			</fileNamePattern>
+			<maxHistory>10</maxHistory>
+			<totalSizeCap>100MB</totalSizeCap>
+		</rollingPolicy>
+	</appender>
+
+	<logger name="org.hibernate" level="warn" />
+	<logger name="org.springframework" level="warn" />
+	<logger name="org.apache" level="warn" />
+
+	<root level="info">
+		<appender-ref ref="SAVE-TO-FILE" />
+	</root>
+
+</configuration>

@@ -13,7 +13,9 @@
 **/target/**
 
 **/bin/**
+**/LOG_PATH_IS_UNDEFINED/**
 
 .DS_Store
 /target/
 /bin/
+
